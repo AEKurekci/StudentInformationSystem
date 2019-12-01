@@ -743,6 +743,7 @@ id blocking
 id bottom
 id btnAcd
 id btnStd
+id button2
 id buttonPanel
 id center_vertical
 id chains
@@ -760,7 +761,10 @@ id dialog_button
 id dimensions
 id direct
 id disableHome
+id editText4
+id editText6
 id edit_query
+id edtPosta
 id end
 id expand_activities_button
 id expanded_menu
@@ -774,8 +778,11 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imageButton
 id imageView
 id imageView2
+id imageView3
+id imageView4
 id info
 id invisible
 id italic
@@ -849,6 +856,11 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
+id textView
+id textView2
+id textView3
+id textView5
+id textView6
 id time
 id title
 id titleDividerNoCustom
