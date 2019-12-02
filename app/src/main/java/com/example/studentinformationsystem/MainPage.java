@@ -2,13 +2,16 @@ package com.example.studentinformationsystem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +28,6 @@ public class MainPage extends AppCompatActivity {
     ListView listBtn;
     ArrayList<Button> lButtons = new ArrayList<>();
 
-    ArrayAdapter<Button> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +51,8 @@ public class MainPage extends AppCompatActivity {
         lButtons.add(btnMuf);
         lButtons.add(btnHazirlik);
 
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, lButtons);
-        listBtn.setAdapter(adapter);
+        final ListView listView = findViewById(R.id.listButtons);
+        ButtonAdaptor adaptor = new ButtonAdaptor(this, lButtons);
+        listView.setAdapter(adaptor);
     }
 }

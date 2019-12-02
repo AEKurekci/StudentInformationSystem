@@ -746,8 +746,10 @@ id btnAcd
 id btnDevamsizlik
 id btnEntry
 id btnHazirlik
+id btnLayout
 id btnMessage
 id btnNot
+id btnOfLayout
 id btnOut
 id btnSinav
 id btnStd
@@ -933,6 +935,7 @@ layout abc_tooltip
 layout activity_main
 layout activity_main_page
 layout activity_student_entry
+layout button_activity
 layout custom_dialog
 layout notification_action
 layout notification_action_tombstone
