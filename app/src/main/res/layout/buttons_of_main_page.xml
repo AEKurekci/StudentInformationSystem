@@ -4,55 +4,49 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/btnNot2"
+        android:id="@+id/btnNot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="Not Bilgisi" />
 
     <Button
-        android:id="@+id/btnDevamsizlik2"
+        android:id="@+id/btnDevamsizlik"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="Devamsızlık Durumu" />
 
     <Button
-        android:id="@+id/btnTranscript2"
+        android:id="@+id/btnTranscript"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="Transkript" />
 
     <Button
-        android:id="@+id/btnAcademic2"
+        android:id="@+id/btnAcademic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="Akademik Takvim" />
 
     <Button
-        android:id="@+id/btnSinav2"
+        android:id="@+id/btnSinav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="Sınav Takvimi" />
 
     <Button
-        android:id="@+id/btnSyllabus2"
+        android:id="@+id/btnSyllabus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="25dp"
         android:text="Müfredat Durumu" />
 
     <Button
-        android:id="@+id/btnHazirlik2"
+        android:id="@+id/btnHazirlik"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"

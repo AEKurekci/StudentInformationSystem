@@ -11,7 +11,7 @@
 9-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:5:5-21:19
+11-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:5:5-22:19
 12        android:allowBackup="true"
 12-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -28,26 +28,29 @@
 19        android:testOnly="true"
 20        android:theme="@style/AppTheme" >
 20-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:11:9-40
-21        <activity android:name="com.example.studentinformationsystem.MainPage" />
-21-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:12:9-55
-21-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:12:19-43
-22        <activity android:name="com.example.studentinformationsystem.StudentEntry" />
-22-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:13:9-50
-22-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:13:19-47
-23        <activity android:name="com.example.studentinformationsystem.MainActivity" >
-23-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:14:9-20:20
+21        <activity android:name="com.example.studentinformationsystem.GradeInformation" />
+21-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:12:9-63
+21-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:12:19-51
+22        <activity android:name="com.example.studentinformationsystem.MainPage" />
+22-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:13:9-46
+22-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:13:19-43
+23        <activity android:name="com.example.studentinformationsystem.StudentEntry" />
+23-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:14:9-50
 23-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:14:19-47
-24            <intent-filter>
-24-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:15:13-19:29
-25                <action android:name="android.intent.action.MAIN" />
-25-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:16:17-69
-25-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:16:25-66
-26
-27                <category android:name="android.intent.category.LAUNCHER" />
-27-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:18:17-77
-27-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:18:27-74
-28            </intent-filter>
-29        </activity>
-30    </application>
-31
-32</manifest>
+24        <activity android:name="com.example.studentinformationsystem.MainActivity" >
+24-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:15:9-21:20
+24-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:15:19-47
+25            <intent-filter>
+25-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:16:13-20:29
+26                <action android:name="android.intent.action.MAIN" />
+26-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:17:17-69
+26-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:17:25-66
+27
+28                <category android:name="android.intent.category.LAUNCHER" />
+28-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:19:17-77
+28-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:19:27-74
+29            </intent-filter>
+30        </activity>
+31    </application>
+32
+33</manifest>

@@ -3,21 +3,14 @@ package com.example.studentinformationsystem;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Adapter;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.zip.Inflater;
 
 public class MainPage extends AppCompatActivity {
     Button btnNot;
@@ -42,13 +35,21 @@ public class MainPage extends AppCompatActivity {
         View buttons;
         layoutInflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         buttons = layoutInflater.inflate(R.layout.buttons_of_main_page,null);
-        btnNot = buttons.findViewById(R.id.btnNot2);
-        btnDevam = buttons.findViewById(R.id.btnDevamsizlik2);
-        btnTranscript = buttons.findViewById(R.id.btnTranscript2);
-        btnAcademic = buttons.findViewById(R.id.btnAcademic2);
-        btnSinav = buttons.findViewById(R.id.btnSinav2);
-        btnMuf = buttons.findViewById(R.id.btnSyllabus2);
-        btnHazirlik = buttons.findViewById(R.id.btnHazirlik2);
+        btnNot = buttons.findViewById(R.id.btnNot);
+        btnDevam = buttons.findViewById(R.id.btnDevamsizlik);
+        btnTranscript = buttons.findViewById(R.id.btnTranscript);
+        btnAcademic = buttons.findViewById(R.id.btnAcademic);
+        btnSinav = buttons.findViewById(R.id.btnSinav);
+        btnMuf = buttons.findViewById(R.id.btnSyllabus);
+        btnHazirlik = buttons.findViewById(R.id.btnHazirlik);
+
+        btnNot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainPage.this, GradeInformation.class);
+                startActivity(i);
+            }
+        });
 
         listBtn = findViewById(R.id.listButtons);
         lButtons.add(btnNot);
