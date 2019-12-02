@@ -2,8 +2,10 @@ package com.example.studentinformationsystem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
@@ -15,6 +17,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.zip.Inflater;
 
 public class MainPage extends AppCompatActivity {
     Button btnNot;
@@ -28,19 +31,24 @@ public class MainPage extends AppCompatActivity {
     ListView listBtn;
     ArrayList<Button> lButtons = new ArrayList<>();
 
+    LayoutInflater layoutInflater;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
 
-        btnNot = findViewById(R.id.btnNot);
-        btnDevam = findViewById(R.id.btnDevamsizlik);
-        btnTranscript = findViewById(R.id.btnTranscript);
-        btnAcademic = findViewById(R.id.btnAcademic);
-        btnSinav = findViewById(R.id.btnSinav);
-        btnMuf = findViewById(R.id.btnSyllabus);
-        btnHazirlik = findViewById(R.id.btnHazirlik);
+        View buttons;
+        layoutInflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        buttons = layoutInflater.inflate(R.layout.buttons_of_main_page,null);
+        btnNot = buttons.findViewById(R.id.btnNot2);
+        btnDevam = buttons.findViewById(R.id.btnDevamsizlik2);
+        btnTranscript = buttons.findViewById(R.id.btnTranscript2);
+        btnAcademic = buttons.findViewById(R.id.btnAcademic2);
+        btnSinav = buttons.findViewById(R.id.btnSinav2);
+        btnMuf = buttons.findViewById(R.id.btnSyllabus2);
+        btnHazirlik = buttons.findViewById(R.id.btnHazirlik2);
 
         listBtn = findViewById(R.id.listButtons);
         lButtons.add(btnNot);
