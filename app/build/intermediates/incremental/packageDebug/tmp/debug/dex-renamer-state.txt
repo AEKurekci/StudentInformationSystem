@@ -1,4 +1,4 @@
-#Wed Dec 04 15:38:52 EET 2019
+#Wed Dec 04 17:36:18 EET 2019
 base.0=C\:\\dev\\android\\SIS\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

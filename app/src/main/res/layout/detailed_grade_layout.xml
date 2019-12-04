@@ -4,4 +4,8 @@
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_light">
 
+    <ListView
+        android:id="@+id/listGradesDetailed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>
