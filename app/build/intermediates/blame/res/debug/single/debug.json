@@ -16,12 +16,20 @@
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout-watch-v20\\abc_alert_dialog_button_bar_material.xml"
     },
     {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13_mtrl_layout_snackbar.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout-sw600dp-v13\\mtrl_layout_snackbar.xml"
+    },
+    {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_simple_overlay_action_mode.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
         "source": "C:\\dev\\android\\SIS\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_bottom_sheet_dialog.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout\\design_bottom_sheet_dialog.xml"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout-v16_notification_template_custom_big.xml.flat",
@@ -56,12 +64,12 @@
         "source": "C:\\dev\\android\\SIS\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_title_item.xml.flat",
-        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_action_bar_title_item.xml"
-    },
-    {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_up_container.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_title_item.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
@@ -80,6 +88,10 @@
         "source": "C:\\dev\\android\\SIS\\app\\src\\main\\res\\layout\\button_activity.xml"
     },
     {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_layout_snackbar_include.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout\\mtrl_layout_snackbar_include.xml"
+    },
+    {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_toolbar.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_screen_toolbar.xml"
     },
@@ -88,8 +100,20 @@
         "source": "C:\\dev\\android\\SIS\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_tab_text.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout\\design_layout_tab_text.xml"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_snackbar.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout\\design_layout_snackbar.xml"
+    },
+    {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\dev\\android\\SIS\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_menu_item.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout\\design_navigation_menu_item.xml"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_template_icon_group.xml.flat",
@@ -100,12 +124,32 @@
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_bottom_navigation_item.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout\\design_bottom_navigation_item.xml"
+    },
+    {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_menu_layout.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item_header.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout\\design_navigation_item_header.xml"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item_separator.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout\\design_navigation_item_separator.xml"
+    },
+    {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "C:\\dev\\android\\SIS\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_menu.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout\\design_navigation_menu.xml"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout\\design_navigation_item.xml"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_tooltip.xml.flat",
@@ -114,6 +158,10 @@
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\dev\\android\\SIS\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_tab_icon.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout\\design_layout_tab_icon.xml"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
@@ -128,12 +176,20 @@
         "source": "C:\\dev\\android\\SIS\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_snackbar_include.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout\\design_layout_snackbar_include.xml"
+    },
+    {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\dev\\android\\SIS\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_icon_group.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\7ddf3b3453ff2ae36284abc49da050c2\\core-1.1.0\\res\\layout\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_text_input_password_icon.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout\\design_text_input_password_icon.xml"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout-watch-v20_abc_alert_dialog_title_material.xml.flat",
@@ -154,6 +210,10 @@
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
         "source": "C:\\dev\\android\\SIS\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item_subheader.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout\\design_navigation_item_subheader.xml"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
@@ -196,6 +256,10 @@
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_grade_information.xml.flat",
+        "source": "C:\\dev\\android\\SIS\\app\\src\\main\\res\\layout\\fragment_grade_information.xml"
+    },
+    {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_activity_chooser_view.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_activity_chooser_view.xml"
     },
@@ -208,12 +272,20 @@
         "source": "C:\\dev\\android\\SIS\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_menu_item_action_area.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout\\design_menu_item_action_area.xml"
+    },
+    {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_search_dropdown_item_icons_2line.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_content_include.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_layout_snackbar.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout\\mtrl_layout_snackbar.xml"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
@@ -242,6 +314,10 @@
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_popup_menu_header_item_layout.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13_design_layout_snackbar.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_chronometer.xml.flat",

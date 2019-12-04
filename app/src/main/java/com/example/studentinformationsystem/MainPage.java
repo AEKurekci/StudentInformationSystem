@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ public class MainPage extends AppCompatActivity {
     Button btnSinav;
     Button btnMuf;
     Button btnHazirlik;
+    ImageButton btnMessage;
 
     ListView listBtn;
     ArrayList<Button> lButtons = new ArrayList<>();
@@ -31,6 +33,15 @@ public class MainPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
+
+        btnMessage = findViewById(R.id.btnMessage);
+        btnMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainPage.this, GradeInformation.class);
+                startActivity(i);
+            }
+        });
 
         View buttons;
         layoutInflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
