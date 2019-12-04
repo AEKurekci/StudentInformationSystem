@@ -8,33 +8,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/darker_gray" />
 
     <TextView
         android:id="@+id/txtViseGrade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/darker_gray" />
 
     <TextView
         android:id="@+id/txtFinalGrade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/darker_gray" />
 
     <TextView
         android:id="@+id/txtLetter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/darker_gray" />
 
     <TextView
         android:id="@+id/txtSituation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/darker_gray" />
 </LinearLayout>

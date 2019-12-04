@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:text="Ders Adı"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/darker_gray" />
 
         <TextView
             android:id="@+id/txtViseGrade3"
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Vize"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/darker_gray" />
 
         <TextView
             android:id="@+id/txtFinalGrade3"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Final"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/darker_gray" />
 
         <TextView
             android:id="@+id/txtLetter3"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Harf Notu"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/darker_gray" />
 
         <TextView
             android:id="@+id/txtSituation3"
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Durumu"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/darker_gray"/>
     </LinearLayout>
 
     <ListView
