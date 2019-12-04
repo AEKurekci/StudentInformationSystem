@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.example.studentinformationsystem.DetailedGradeFrag;
 import com.example.studentinformationsystem.R;
+import com.example.studentinformationsystem.SummaryGradeFrag;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
@@ -29,13 +31,29 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
-        return PlaceholderFragment.newInstance(position + 1);
+        Fragment frag = null;
+        switch (position){
+            case 0:
+                frag = new SummaryGradeFrag();
+                break;
+            case 1:
+                frag = new DetailedGradeFrag();
+                break;
+        }
+        return frag;
     }
 
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return mContext.getResources().getString(TAB_TITLES[position]);
+        switch (position){
+            case 0:
+                return "Özet Not durumu";
+            case 1:
+                return "Detaylı Not Durumu";
+            default:
+                return null;
+        }
     }
 
     @Override

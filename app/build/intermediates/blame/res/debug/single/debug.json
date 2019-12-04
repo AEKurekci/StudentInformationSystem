@@ -12,12 +12,12 @@
         "source": "C:\\dev\\android\\SIS\\app\\src\\main\\res\\layout\\buttons_of_main_page.xml"
     },
     {
-        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout-watch-v20_abc_alert_dialog_button_bar_material.xml.flat",
-        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout-watch-v20\\abc_alert_dialog_button_bar_material.xml"
-    },
-    {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13_mtrl_layout_snackbar.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout-sw600dp-v13\\mtrl_layout_snackbar.xml"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout-watch-v20_abc_alert_dialog_button_bar_material.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout-watch-v20\\abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_simple_overlay_action_mode.xml.flat",
@@ -134,6 +134,10 @@
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item_header.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout\\design_navigation_item_header.xml"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_detailed_grade_layout.xml.flat",
+        "source": "C:\\dev\\android\\SIS\\app\\src\\main\\res\\layout\\detailed_grade_layout.xml"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item_separator.xml.flat",
@@ -282,6 +286,10 @@
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_content_include.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_summary_grade_layout.xml.flat",
+        "source": "C:\\dev\\android\\SIS\\app\\src\\main\\res\\layout\\summary_grade_layout.xml"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_layout_snackbar.xml.flat",

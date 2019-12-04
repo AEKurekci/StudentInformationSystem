@@ -1424,6 +1424,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout detailed_grade_layout
 layout fragment_grade_information
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
@@ -1436,6 +1437,7 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout summary_grade_layout
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
