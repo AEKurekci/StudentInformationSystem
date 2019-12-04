@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Öğrenci Bilgi Sistemi</string>
+    <string name="tab_text_1">Özet Not Durumu</string>
+    <string name="tab_text_2">Detaylı Not Durumu</string>
+    <string name="title_activity_grade_information">Not Bilgisi</string>
+</resources>
