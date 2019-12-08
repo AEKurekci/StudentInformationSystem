@@ -11,7 +11,7 @@
 9-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:5:5-25:19
+11-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:5:5-26:19
 12        android:allowBackup="true"
 12-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -28,45 +28,48 @@
 19        android:testOnly="true"
 20        android:theme="@style/AppTheme" >
 20-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:11:9-40
-21        <activity
-21-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:12:9-15:68
-22            android:name="com.example.studentinformationsystem.GradeInformation"
-22-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:13:13-45
-23            android:label="@string/title_activity_grade_information"
-23-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:14:13-69
-24            android:theme="@style/AppTheme.NoActionBar" />
-24-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:15:13-56
-25        <activity android:name="com.example.studentinformationsystem.MainPage" />
-25-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:16:9-46
-25-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:16:19-43
-26        <activity android:name="com.example.studentinformationsystem.StudentEntry" />
-26-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:17:9-50
-26-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:17:19-47
-27        <activity android:name="com.example.studentinformationsystem.MainActivity" >
-27-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:18:9-24:20
+21        <activity android:name="com.example.studentinformationsystem.Attendance" />
+21-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:12:9-57
+21-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:12:19-45
+22        <activity
+22-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:13:9-16:59
+23            android:name="com.example.studentinformationsystem.GradeInformation"
+23-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:14:13-45
+24            android:label="@string/title_activity_grade_information"
+24-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:15:13-69
+25            android:theme="@style/AppTheme.NoActionBar" />
+25-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:16:13-56
+26        <activity android:name="com.example.studentinformationsystem.MainPage" />
+26-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:17:9-46
+26-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:17:19-43
+27        <activity android:name="com.example.studentinformationsystem.StudentEntry" />
+27-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:18:9-50
 27-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:18:19-47
-28            <intent-filter>
-28-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:19:13-23:29
-29                <action android:name="android.intent.action.MAIN" />
-29-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:20:17-69
-29-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:20:25-66
-30
-31                <category android:name="android.intent.category.LAUNCHER" />
-31-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:22:17-77
-31-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:22:27-74
-32            </intent-filter>
-33        </activity>
-34
-35        <provider
-35-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\ali19\.gradle\caches\transforms-2\files-2.1\a967f6e47692c68b4909e31f253071dc\lifecycle-process-2.1.0\AndroidManifest.xml:23:9-27:43
-36            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-36-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\ali19\.gradle\caches\transforms-2\files-2.1\a967f6e47692c68b4909e31f253071dc\lifecycle-process-2.1.0\AndroidManifest.xml:24:13-79
-37            android:authorities="com.example.studentinformationsystem.lifecycle-process"
-37-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\ali19\.gradle\caches\transforms-2\files-2.1\a967f6e47692c68b4909e31f253071dc\lifecycle-process-2.1.0\AndroidManifest.xml:25:13-69
-38            android:exported="false"
-38-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\ali19\.gradle\caches\transforms-2\files-2.1\a967f6e47692c68b4909e31f253071dc\lifecycle-process-2.1.0\AndroidManifest.xml:26:13-37
-39            android:multiprocess="true" />
-39-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\ali19\.gradle\caches\transforms-2\files-2.1\a967f6e47692c68b4909e31f253071dc\lifecycle-process-2.1.0\AndroidManifest.xml:27:13-40
-40    </application>
-41
-42</manifest>
+28        <activity android:name="com.example.studentinformationsystem.MainActivity" >
+28-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:19:9-25:20
+28-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:19:19-47
+29            <intent-filter>
+29-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:20:13-24:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:21:17-69
+30-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:21:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:23:17-77
+32-->C:\dev\android\SIS\app\src\main\AndroidManifest.xml:23:27-74
+33            </intent-filter>
+34        </activity>
+35
+36        <provider
+36-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\ali19\.gradle\caches\transforms-2\files-2.1\a967f6e47692c68b4909e31f253071dc\lifecycle-process-2.1.0\AndroidManifest.xml:23:9-27:43
+37            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+37-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\ali19\.gradle\caches\transforms-2\files-2.1\a967f6e47692c68b4909e31f253071dc\lifecycle-process-2.1.0\AndroidManifest.xml:24:13-79
+38            android:authorities="com.example.studentinformationsystem.lifecycle-process"
+38-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\ali19\.gradle\caches\transforms-2\files-2.1\a967f6e47692c68b4909e31f253071dc\lifecycle-process-2.1.0\AndroidManifest.xml:25:13-69
+39            android:exported="false"
+39-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\ali19\.gradle\caches\transforms-2\files-2.1\a967f6e47692c68b4909e31f253071dc\lifecycle-process-2.1.0\AndroidManifest.xml:26:13-37
+40            android:multiprocess="true" />
+40-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\ali19\.gradle\caches\transforms-2\files-2.1\a967f6e47692c68b4909e31f253071dc\lifecycle-process-2.1.0\AndroidManifest.xml:27:13-40
+41    </application>
+42
+43</manifest>

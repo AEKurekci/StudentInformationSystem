@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Attendance"></activity>
         <activity
             android:name=".GradeInformation"
             android:label="@string/title_activity_grade_information"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainPage" />
         <activity android:name=".StudentEntry" />
         <activity android:name=".MainActivity">

@@ -17,7 +17,7 @@ public class SummaryAdapter extends BaseAdapter {
     private List<Nots> nots;
 
     public SummaryAdapter(SummaryGradeFrag activity, List<Nots> nots){
-        mInflater = (LayoutInflater) activity.getActivity().getSystemService((Context.LAYOUT_INFLATER_SERVICE));//.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        mInflater = (LayoutInflater) activity.getActivity().getSystemService((Context.LAYOUT_INFLATER_SERVICE));
         this.nots = nots;
     }
 

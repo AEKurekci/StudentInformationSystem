@@ -96,10 +96,70 @@
             app:srcCompat="@android:drawable/btn_dialog" />
     </LinearLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btnNot2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Not Bilgisi" />
+
+            <Button
+                android:id="@+id/btnDevamsizlik2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Devamsızlık Durumu" />
+
+            <Button
+                android:id="@+id/btnTranscript2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Transkript" />
+
+            <Button
+                android:id="@+id/btnAcademic2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Akademik Takvim" />
+
+            <Button
+                android:id="@+id/btnSinav2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Sınav Takvimi" />
+
+            <Button
+                android:id="@+id/btnSyllabus2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Müfredat Durumu" />
+
+            <Button
+                android:id="@+id/btnHazirlik2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Hazırlık İşlemleri" />
+        </LinearLayout>
+    </ScrollView>
+
     <ListView
         android:id="@+id/listButtons"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
     </ListView>
 
