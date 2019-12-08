@@ -79,6 +79,14 @@ public class MainPage extends AppCompatActivity {
             }
         });
 
+        btnTranscript.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainPage.this,Transcript.class);
+                startActivity(i);
+            }
+        });
+
         listBtn = findViewById(R.id.listButtons);
         lButtons.add(btnNot);
         lButtons.add(btnDevam);

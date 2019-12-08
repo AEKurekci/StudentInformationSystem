@@ -12,6 +12,10 @@
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout-sw600dp-v13\\mtrl_layout_snackbar.xml"
     },
     {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\12fde95cdcb09579adadf29368cbb7c4\\media-1.0.0\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_simple_overlay_action_mode.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
@@ -44,12 +48,12 @@
         "source": "C:\\dev\\android\\SIS\\app\\src\\main\\res\\layout\\summary_row_of_listview.xml"
     },
     {
-        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_title_item.xml.flat",
-        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_action_bar_title_item.xml"
-    },
-    {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_up_container.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_title_item.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
@@ -100,6 +104,10 @@
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media_custom.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\12fde95cdcb09579adadf29368cbb7c4\\media-1.0.0\\res\\layout\\notification_template_media_custom.xml"
+    },
+    {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_checkbox.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
@@ -144,16 +152,20 @@
         "source": "C:\\dev\\android\\SIS\\app\\src\\main\\res\\layout\\summary_grade_layout.xml"
     },
     {
-        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
-        "source": "C:\\dev\\android\\SIS\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
-    },
-    {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_row_of_attendance.xml.flat",
         "source": "C:\\dev\\android\\SIS\\app\\src\\main\\res\\layout\\row_of_attendance.xml"
     },
     {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\dev\\android\\SIS\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
+    },
+    {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_menu_item_layout.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_transcript.xml.flat",
+        "source": "C:\\dev\\android\\SIS\\app\\src\\main\\res\\layout\\activity_transcript.xml"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13_design_layout_snackbar.xml.flat",
@@ -184,8 +196,20 @@
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\12fde95cdcb09579adadf29368cbb7c4\\media-1.0.0\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_attendance.xml.flat",
         "source": "C:\\dev\\android\\SIS\\app\\src\\main\\res\\layout\\activity_attendance.xml"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\12fde95cdcb09579adadf29368cbb7c4\\media-1.0.0\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_action.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\12fde95cdcb09579adadf29368cbb7c4\\media-1.0.0\\res\\layout\\notification_media_action.xml"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_buttons_of_main_page.xml.flat",
@@ -212,6 +236,10 @@
         "source": "C:\\dev\\android\\SIS\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_lines_media.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\12fde95cdcb09579adadf29368cbb7c4\\media-1.0.0\\res\\layout\\notification_template_lines_media.xml"
+    },
+    {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_alert_dialog_title_material.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
@@ -234,6 +262,10 @@
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_snackbar.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\16e34cc941ca560f1ce786850088f542\\material-1.0.0\\res\\layout\\design_layout_snackbar.xml"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\12fde95cdcb09579adadf29368cbb7c4\\media-1.0.0\\res\\layout\\notification_template_media.xml"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_menu_item.xml.flat",
@@ -298,6 +330,10 @@
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout-watch-v20_abc_alert_dialog_title_material.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout-watch-v20\\abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_custom.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\12fde95cdcb09579adadf29368cbb7c4\\media-1.0.0\\res\\layout\\notification_template_big_media_custom.xml"
     },
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_action.xml.flat",
@@ -386,5 +422,9 @@
     {
         "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_popup_menu_item_layout.xml.flat",
         "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\a136933342b0efb06224178e8f312868\\appcompat-1.1.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\dev\\android\\SIS\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow_custom.xml.flat",
+        "source": "C:\\Users\\ali19\\.gradle\\caches\\transforms-2\\files-2.1\\12fde95cdcb09579adadf29368cbb7c4\\media-1.0.0\\res\\layout\\notification_template_big_media_narrow_custom.xml"
     }
 ]
