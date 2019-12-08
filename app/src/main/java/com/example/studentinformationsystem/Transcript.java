@@ -2,10 +2,13 @@ package com.example.studentinformationsystem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.util.FitPolicy;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Transcript extends AppCompatActivity {
 
@@ -29,5 +32,25 @@ public class Transcript extends AppCompatActivity {
                 .spacing(0)
                 .pageFitPolicy(FitPolicy.WIDTH) // mode to fit pages in the view
                 .load();
+
+        FloatingActionButton fabDownload = findViewById(R.id.fabDownload);
+
+        fabDownload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent i = new Intent(Transcript.this, MainPage.class);
+                //startActivity(i);
+            }
+        });
+
+        FloatingActionButton fabBack = findViewById(R.id.fabBackTranscript);
+
+        fabBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Transcript.this, MainPage.class);
+                startActivity(i);
+            }
+        });
     }
 }
