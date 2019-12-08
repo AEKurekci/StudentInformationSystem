@@ -95,6 +95,14 @@ public class MainPage extends AppCompatActivity {
             }
         });
 
+        btnSinav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainPage.this,ExamCalendar.class);
+                startActivity(i);
+            }
+        });
+
         listBtn = findViewById(R.id.listButtons);
         lButtons.add(btnNot);
         lButtons.add(btnDevam);
