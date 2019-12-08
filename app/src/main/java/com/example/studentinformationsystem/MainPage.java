@@ -22,6 +22,7 @@ public class MainPage extends AppCompatActivity {
     Button btnMuf;
     Button btnHazirlik;
     ImageButton btnMessage;
+    ImageButton btnOut;
 
     ListView listBtn;
     ArrayList<Button> lButtons = new ArrayList<>();
@@ -40,6 +41,15 @@ public class MainPage extends AppCompatActivity {
             public void onClick(View view) {
                 //Intent i = new Intent(MainPage.this, GradeInformation.class);
                 //startActivity(i);
+            }
+        });
+
+        btnOut = findViewById(R.id.btnOut);
+        btnOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainPage.this, StudentEntry.class);
+                startActivity(i);
             }
         });
 
@@ -107,6 +117,14 @@ public class MainPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainPage.this,Syllabus.class);
+                startActivity(i);
+            }
+        });
+
+        btnHazirlik.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainPage.this,PrepSchoolProcess.class);
                 startActivity(i);
             }
         });

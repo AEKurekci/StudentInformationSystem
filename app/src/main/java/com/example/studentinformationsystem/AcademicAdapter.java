@@ -8,8 +8,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.example.studentinformationsystem.ui.main.DatesOfAcademic;
-
 import java.util.List;
 
 public class AcademicAdapter extends BaseAdapter {

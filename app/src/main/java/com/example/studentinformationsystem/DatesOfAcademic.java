@@ -1,4 +1,4 @@
-package com.example.studentinformationsystem.ui.main;
+package com.example.studentinformationsystem;
 
 public class DatesOfAcademic {
     private String action;
