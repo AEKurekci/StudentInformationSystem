@@ -103,6 +103,14 @@ public class MainPage extends AppCompatActivity {
             }
         });
 
+        btnMuf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainPage.this,Syllabus.class);
+                startActivity(i);
+            }
+        });
+
         listBtn = findViewById(R.id.listButtons);
         lButtons.add(btnNot);
         lButtons.add(btnDevam);

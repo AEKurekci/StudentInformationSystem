@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ExamCalendar"></activity>
         <activity android:name=".AcademicCalendar" />
+        <activity android:name=".Syllabus"/>
         <activity android:name=".Transcript" />
         <activity android:name=".Attendance" />
         <activity
