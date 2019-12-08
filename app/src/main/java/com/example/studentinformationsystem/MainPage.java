@@ -87,6 +87,14 @@ public class MainPage extends AppCompatActivity {
             }
         });
 
+        btnAcademic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainPage.this,AcademicCalendar.class);
+                startActivity(i);
+            }
+        });
+
         listBtn = findViewById(R.id.listButtons);
         lButtons.add(btnNot);
         lButtons.add(btnDevam);
