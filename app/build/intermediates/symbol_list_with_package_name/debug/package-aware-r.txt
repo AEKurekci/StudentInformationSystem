@@ -1216,6 +1216,7 @@ id fab
 id fabBackAttendance
 id fabBackTranscript
 id fabDownload
+id fabOfCalender
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1373,6 +1374,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id txtActionOfAcademic
 id txtAttendanceHours
 id txtAverageOfClass
 id txtClassCode
@@ -1384,6 +1386,7 @@ id txtClassNoOfAttendance
 id txtCredit
 id txtCreditOfAttendance
 id txtDateOfAnnouncement
+id txtEndDateOfAcademic
 id txtFinalGrade
 id txtFinalGrade2
 id txtFinalGrade3
@@ -1394,6 +1397,7 @@ id txtNumAndName
 id txtSituation
 id txtSituation2
 id txtSituation3
+id txtStartDateOfAcademic
 id txtTeacherName
 id txtTitle
 id txtTitle2
@@ -1512,6 +1516,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout row_of_academic_calendar
 layout row_of_attendance
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
