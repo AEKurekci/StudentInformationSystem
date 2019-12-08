@@ -1255,6 +1255,7 @@ id listGrades
 id listGradesDetailed
 id listMode
 id listOfAcademicCal
+id listOfExamDates
 id list_item
 id lytTitle
 id masked
@@ -1382,11 +1383,14 @@ id txtClassCode
 id txtClassName
 id txtClassName3
 id txtClassNameOfAttendance
+id txtClassNameOfExamCal
 id txtClassNameOfSummary
 id txtClassNoOfAttendance
+id txtClassRoomOfExamCal
 id txtCredit
 id txtCreditOfAttendance
 id txtDateOfAnnouncement
+id txtDateOfExamCal
 id txtEndDateOfAcademic
 id txtFinalGrade
 id txtFinalGrade2
@@ -1520,6 +1524,7 @@ layout notification_template_part_chronometer
 layout notification_template_part_time
 layout row_of_academic_calendar
 layout row_of_attendance
+layout row_of_exam_calendar
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

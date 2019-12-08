@@ -26,6 +26,7 @@ public class ExamCalendar extends AppCompatActivity {
         examDates.add(new ExamDates("Grafical User Interface","15/12/2019","C105"));
 
         ListView lv = findViewById(R.id.listOfExamDates);
-
+        ExamCalendarAdapter adapter = new ExamCalendarAdapter(this, examDates);
+        lv.setAdapter(adapter);
     }
 }
