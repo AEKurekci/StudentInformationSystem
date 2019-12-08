@@ -1254,6 +1254,7 @@ id listButtons
 id listGrades
 id listGradesDetailed
 id listMode
+id listOfAcademicCal
 id list_item
 id lytTitle
 id masked
