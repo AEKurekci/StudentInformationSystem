@@ -3,4 +3,10 @@
     <string name="title_activity_grade_information">GradeInformation</string>
     <string name="tab_text_1">Summary Grade</string>
     <string name="tab_text_2">Detailed Grade</string>
+    <string-array name="terms">
+        <item>2018—2019 Bahar</item>
+        <item>2018—2019 Güz</item>
+        <item>2017—2018 Bahar</item>
+        <item>2017—2018 Güz</item>
+    </string-array>
 </resources>
