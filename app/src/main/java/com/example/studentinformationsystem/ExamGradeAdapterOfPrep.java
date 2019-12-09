@@ -10,11 +10,11 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class ExamCalAdapterOfPrep extends BaseAdapter {
+public class ExamGradeAdapterOfPrep extends BaseAdapter {
     private LayoutInflater mInflater;
     private List<ExamDatesOfPrep> examDates;
 
-    public ExamCalAdapterOfPrep(Activity activity, List<ExamDatesOfPrep> dates){
+    public ExamGradeAdapterOfPrep(Activity activity, List<ExamDatesOfPrep> dates){
         this.mInflater =(LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.examDates = dates;
     }
@@ -39,12 +39,12 @@ public class ExamCalAdapterOfPrep extends BaseAdapter {
         View rowView;
         rowView = mInflater.inflate(R.layout.row_exam_of_prep,null);
         TextView tvExamName = rowView.findViewById(R.id.txtExamNameOfPrep);
-        TextView tvDate = rowView.findViewById(R.id.txtDateOrGradeOfExamOfPrep);
+        TextView tvGrade = rowView.findViewById(R.id.txtDateOrGradeOfExamOfPrep);
 
         ExamDatesOfPrep examDatesOfPrep = examDates.get(position);
 
         tvExamName.setText(examDatesOfPrep.getClassName());
-        tvDate.setText(examDatesOfPrep.getDate());
+        tvGrade.setText(examDatesOfPrep.getGrade());
 
         return rowView;
     }

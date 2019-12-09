@@ -1401,7 +1401,7 @@ id txtCredit
 id txtCreditOfAttendance
 id txtDateOfAnnouncement
 id txtDateOfExamCal
-id txtDateOfExamOfPrep
+id txtDateOrGradeOfExamOfPrep
 id txtEndDateOfAcademic
 id txtExamNameOfPrep
 id txtFinalGrade

@@ -1400,7 +1400,7 @@ int id txtCredit 0x7f08013d
 int id txtCreditOfAttendance 0x7f08013e
 int id txtDateOfAnnouncement 0x7f08013f
 int id txtDateOfExamCal 0x7f080140
-int id txtDateOfExamOfPrep 0x7f080141
+int id txtDateOrGradeOfExamOfPrep 0x7f080141
 int id txtEndDateOfAcademic 0x7f080142
 int id txtExamNameOfPrep 0x7f080143
 int id txtFinalGrade 0x7f080144

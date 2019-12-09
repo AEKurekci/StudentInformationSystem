@@ -12,6 +12,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class PrepSchoolProcess extends AppCompatActivity {
 
     Button btnExam;
+    Button btnGrade;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +23,18 @@ public class PrepSchoolProcess extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(PrepSchoolProcess.this,ExamCalendar.class);
-                String str = "fromPrep";
+                String str = "fromPrepForCal";
+                i.putExtra("type",str);
+                startActivity(i);
+            }
+        });
+
+        btnExam = findViewById(R.id.btnGradeListOfPrep);
+        btnExam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(PrepSchoolProcess.this,ExamCalendar.class);
+                String str = "fromPrepForGrade";
                 i.putExtra("type",str);
                 startActivity(i);
             }

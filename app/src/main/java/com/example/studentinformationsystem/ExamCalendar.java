@@ -17,6 +17,7 @@ public class ExamCalendar extends AppCompatActivity {
 
     List<ExamDates> examDates = new ArrayList<>();
     List<ExamDatesOfPrep> examDatesOfPreps = new ArrayList<>();
+    List<ExamDatesOfPrep> examGradeOfPreps = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,7 @@ public class ExamCalendar extends AppCompatActivity {
             examDates.add(new ExamDates("Grafical User Interface","15/12/2019","C105"));
             ExamCalendarAdapter adapter = new ExamCalendarAdapter(this, examDates);
             lv.setAdapter(adapter);
-        }else if(type.equals("fromPrep")) {
+        }else if(type.equals("fromPrepForCal")) {
             examDatesOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2016"));
             examDatesOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","13.05.2016"));
             examDatesOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2016"));
@@ -51,7 +52,21 @@ public class ExamCalendar extends AppCompatActivity {
             examDatesOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","13.05.2016"));
             ExamCalAdapterOfPrep adapterOfPrep = new ExamCalAdapterOfPrep(this, examDatesOfPreps);
             lv.setAdapter(adapterOfPrep);
-        }else{
+        }else if(type.equals("fromPrepForGrade")){
+            examGradeOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2016","65"));
+            examGradeOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","13.05.2016","55"));
+            examGradeOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2016","55"));
+            examGradeOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","13.05.2016","55"));
+            examGradeOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2016","55"));
+            examGradeOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","13.05.2016","55"));
+            examGradeOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2016","55"));
+            examGradeOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","13.05.2016","55"));
+            examGradeOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2016","55"));
+            examGradeOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","13.05.2016","55"));
+            ExamGradeAdapterOfPrep adapterOfPrep = new ExamGradeAdapterOfPrep(this, examGradeOfPreps);
+            lv.setAdapter(adapterOfPrep);
+        }
+        else{
             Log.d("AEK", type);
         }
 
