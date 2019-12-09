@@ -109,6 +109,8 @@ public class MainPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainPage.this,ExamCalendar.class);
+                String str = "fromMain";
+                i.putExtra("type",str);
                 startActivity(i);
             }
         });

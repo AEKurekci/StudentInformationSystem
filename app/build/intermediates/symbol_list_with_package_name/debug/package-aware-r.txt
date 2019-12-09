@@ -1153,9 +1153,12 @@ id bottom
 id btnAcademic
 id btnAcademic2
 id btnAcd
+id btnAttendanceOfPrep
 id btnDevamsizlik
 id btnDevamsizlik2
 id btnEntry
+id btnExamCalOfPrep
+id btnGradeListOfPrep
 id btnHazirlik
 id btnHazirlik2
 id btnLayout
@@ -1164,6 +1167,7 @@ id btnNot
 id btnNot2
 id btnOfLayout
 id btnOut
+id btnSchedule
 id btnSinav
 id btnSinav2
 id btnStd
@@ -1214,8 +1218,12 @@ id expand_activities_button
 id expanded_menu
 id fab
 id fabBackAttendance
+id fabBackExamCal
+id fabBackPrep
+id fabBackSyllabus
 id fabBackTranscript
 id fabDownload
+id fabDownloadOfSyllabus
 id fabOfCalender
 id fill
 id fill_horizontal
@@ -1282,6 +1290,7 @@ id parent
 id parentPanel
 id parent_matrix
 id pdfView
+id pdfViewOfSyllabus
 id percent
 id pin
 id progress_circular
@@ -1352,6 +1361,7 @@ id textStart
 id textView
 id textView10
 id textView11
+id textView12
 id textView2
 id textView3
 id textView4
@@ -1391,7 +1401,9 @@ id txtCredit
 id txtCreditOfAttendance
 id txtDateOfAnnouncement
 id txtDateOfExamCal
+id txtDateOfExamOfPrep
 id txtEndDateOfAcademic
+id txtExamNameOfPrep
 id txtFinalGrade
 id txtFinalGrade2
 id txtFinalGrade3
@@ -1483,7 +1495,9 @@ layout activity_exam_calendar
 layout activity_grade_information
 layout activity_main
 layout activity_main_page
+layout activity_prep_school_process
 layout activity_student_entry
+layout activity_syllabus
 layout activity_transcript
 layout button_activity
 layout buttons_of_main_page
@@ -1522,6 +1536,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout row_exam_of_prep
 layout row_of_academic_calendar
 layout row_of_attendance
 layout row_of_exam_calendar
