@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:text="Dönem : " />
+            android:text="@string/textDonem" />
 
         <Spinner
             android:id="@+id/spinner"
@@ -54,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Possessions:" />
+            android:text="@string/textPossessions" />
 
         <TextView
             android:id="@+id/txtPossessions"
