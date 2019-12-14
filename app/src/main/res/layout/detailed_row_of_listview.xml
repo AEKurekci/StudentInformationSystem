@@ -23,7 +23,7 @@
             android:id="@+id/textView7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sınıf Ortalaması" />
+            android:text="@string/textSinifOrtalamasi" />
 
         <TextView
             android:id="@+id/txtAverageOfClass"
@@ -34,7 +34,7 @@
             android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="İlan Tarihi" />
+            android:text="@string/textIlanTarihi" />
 
         <TextView
             android:id="@+id/txtDateOfAnnouncement"
@@ -59,27 +59,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Vize" />
+                android:text="@string/textVize" />
 
             <TextView
                 android:id="@+id/txtFinalGrade2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Final" />
+                android:text="@string/textFinal" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Kredi" />
+                android:text="@string/textKredi" />
 
             <TextView
                 android:id="@+id/txtSituation2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.7"
-                android:text="Öğretim Görevlisi" />
+                android:text="@string/textOgretimGorevlisi" />
         </LinearLayout>
 
         <LinearLayout
