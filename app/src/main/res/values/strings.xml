@@ -6,6 +6,8 @@
     <string name="textDonem">Dönem :</string>
     <string name="textApsent">Apsent :</string>
     <string name="textPossessions">Possessions:</string>
+    <string name="textMugla">MUĞLA</string>
+    <string name="textUniversityName">SITKI KOÇMAN ÜNİVERSİTESİ</string>
     <string-array name="terms">
         <item>2018—2019 Bahar</item>
         <item>2018—2019 Güz</item>
