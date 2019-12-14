@@ -8,47 +8,47 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Not Bilgisi" />
+        android:text="@string/btnNotBilgisi" />
 
     <Button
         android:id="@+id/btnDevamsizlik"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Devamsızlık Durumu" />
+        android:text="@string/btnDevamsizlikBilgisi" />
 
     <Button
         android:id="@+id/btnTranscript"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Transkript" />
+        android:text="@string/btnTranskript" />
 
     <Button
         android:id="@+id/btnAcademic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Akademik Takvim" />
+        android:text="@string/btnAkademikTakvim" />
 
     <Button
         android:id="@+id/btnSinav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Sınav Takvimi" />
+        android:text="@string/btnSinavTakvimi" />
 
     <Button
         android:id="@+id/btnSyllabus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Müfredat Durumu" />
+        android:text="@string/btnMufredatDurumu" />
 
     <Button
         android:id="@+id/btnHazirlik"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Hazırlık İşlemleri" />
+        android:text="@string/btnHazirlikIslemleri" />
 </LinearLayout>

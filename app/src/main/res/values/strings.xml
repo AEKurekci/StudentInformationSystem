@@ -8,6 +8,39 @@
     <string name="textPossessions">Possessions:</string>
     <string name="textMugla">MUĞLA</string>
     <string name="textUniversityName">SITKI KOÇMAN ÜNİVERSİTESİ</string>
+    <string name="textStudentInformationSystem">Öğrenci Bilgi Sistemi</string>
+    <string name="textDersAdi">Ders Adı</string>
+    <string name="textKredi">Kredi</string>
+    <string name="textSinif">Sınıf</string>
+    <string name="textDevamsizlikSaati">Devamsızlık Saati</string>
+    <string name="textNumAndName">160709031 - Ali Emre Kürekci</string>
+    <string name="btnNotBilgisi">Not Bilgisi</string>
+    <string name="btnDevamsizlikBilgisi">Devamsızlık Durumu</string>
+    <string name="btnTranskript">Transkript</string>
+    <string name="btnAkademikTakvim">Akademik Takvim</string>
+    <string name="btnSinavTakvimi">Sınav Takvimi</string>
+    <string name="btnMufredatDurumu">Müfredat Durumu</string>
+    <string name="btnHazirlikIslemleri">Hazırlık İşlemleri</string>
+    <string name="textHazirlikIslemleri">HAZIRLIK İŞLEMLERİ</string>
+    <string name="btnNotListesi">Not Listesi</string>
+    <string name="btnDevamsizlik">Devamsızlık</string>
+    <string name="btnDersProgrami">Ders Programı</string>
+    <string name="textKullaniciAdi">Kullanıcı Adı:</string>
+    <string name="textSıfre">Şifre:</string>
+    <string name="textPosta">\@posta.mu.edu.tr</string>
+    <string name="textSayilarinToplami">Sayıların Toplamı:</string>
+    <string name="textToplam">5 +13</string>
+    <string name="btnGiris">Giriş</string>
+    <string name="textRandom">fgdfgdfgdfg\ndfgafgdfhsdh\ndfgsdfhkaglkj</string>
+    <string name="btnButton">Button</string>
+    <string name="textSinifOrtalamasi">Sınıf Ortalaması</string>
+    <string name="textIlanTarihi">İlan Tarihi</string>
+    <string name="textVize">Vize</string>
+    <string name="textFinal">Final</string>
+    <string name="textOgretimGorevlisi">Öğretim Görevlisi</string>
+    <string name="textHarfNotu">Harf Notu</string>
+    <string name="textDurumu">Durumu</string>
+
     <string-array name="terms">
         <item>2018—2019 Bahar</item>
         <item>2018—2019 Güz</item>
