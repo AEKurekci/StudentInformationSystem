@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "774264040909",
+    "firebase_url": "https://studentinformations-99bfc.firebaseio.com",
+    "project_id": "studentinformations-99bfc",
+    "storage_bucket": "studentinformations-99bfc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774264040909:android:51cc317ad24faa5cfb6884",
+        "android_client_info": {
+          "package_name": "com.example.studentinformationsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774264040909-bjss93pb46ludlnq55btb199m943ppoh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmhvmDWCje2qgDSugheGtbvL4oL1YMpfs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "774264040909-bjss93pb46ludlnq55btb199m943ppoh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
