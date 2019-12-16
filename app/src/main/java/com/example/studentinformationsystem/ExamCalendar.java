@@ -30,39 +30,39 @@ public class ExamCalendar extends AppCompatActivity {
         ListView lv = findViewById(R.id.listOfExamDates);
 
         if(type.equals("fromMain")) {
-            examDates.add(new ExamDates("Grafical User Interface","15/12/2019","C105"));
-            examDates.add(new ExamDates("Grafical User Interface","15/12/2019","C105"));
-            examDates.add(new ExamDates("Grafical User Interface","15/12/2019","C105"));
-            examDates.add(new ExamDates("Grafical User Interface","15/12/2019","C105"));
-            examDates.add(new ExamDates("Grafical User Interface","15/12/2019","C105"));
-            examDates.add(new ExamDates("Grafical User Interface","15/12/2019","C105"));
-            examDates.add(new ExamDates("Grafical User Interface","15/12/2019","C105"));
+            examDates.add(new ExamDates("GUI Programming","15/10/2019","C105"));
+            examDates.add(new ExamDates("Computer Networks","11/10/2019","B2B07"));
+            examDates.add(new ExamDates("PRINCIPLES OF KEMAL ATATURK","23/10/2019","CB09"));
+            examDates.add(new ExamDates("Design and Analysis of Algorithm","28/09/2019","C104"));
+            examDates.add(new ExamDates("Artificial Intelligence","19/10/2019","CZ04"));
+            examDates.add(new ExamDates("Software Engineering","07/10/2019","C105"));
+            examDates.add(new ExamDates("Fotografcılık","02/12/2019","FB07"));
             ExamCalendarAdapter adapter = new ExamCalendarAdapter(this, examDates);
             lv.setAdapter(adapter);
         }else if(type.equals("fromPrepForCal")) {
-            examDatesOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2016"));
-            examDatesOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","13.05.2016"));
-            examDatesOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2016"));
-            examDatesOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","13.05.2016"));
-            examDatesOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2016"));
-            examDatesOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","13.05.2016"));
-            examDatesOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2016"));
-            examDatesOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","13.05.2016"));
-            examDatesOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2016"));
-            examDatesOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","13.05.2016"));
+            examDatesOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2019"));
+            examDatesOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","21.05.2019"));
+            examDatesOfPreps.add(new ExamDatesOfPrep("Başarı Sınavı:","09.05.2019"));
+            examDatesOfPreps.add(new ExamDatesOfPrep("Proje Çalışması:","05.05.2019"));
+            examDatesOfPreps.add(new ExamDatesOfPrep("Konuşma Sınavı:","18.04.2019"));
+            examDatesOfPreps.add(new ExamDatesOfPrep("Dilin Kullanımı Sınavı 3:","24.03.2019"));
+            examDatesOfPreps.add(new ExamDatesOfPrep("Başarı Sınavı 2:","21.05.2019"));
+            examDatesOfPreps.add(new ExamDatesOfPrep("Dilin Kullanımı Sınavı 2:","07.03.2019"));
+            examDatesOfPreps.add(new ExamDatesOfPrep("Başarı Sınavı 3:","18.11.2018"));
+            examDatesOfPreps.add(new ExamDatesOfPrep("Dilin Kullanımı Sınavı 1:","25.10.2019"));
             ExamCalAdapterOfPrep adapterOfPrep = new ExamCalAdapterOfPrep(this, examDatesOfPreps);
             lv.setAdapter(adapterOfPrep);
         }else if(type.equals("fromPrepForGrade")){
             examGradeOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2016","65"));
             examGradeOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","13.05.2016","55"));
-            examGradeOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2016","55"));
-            examGradeOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","13.05.2016","55"));
-            examGradeOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2016","55"));
-            examGradeOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","13.05.2016","55"));
-            examGradeOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2016","55"));
-            examGradeOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","13.05.2016","55"));
-            examGradeOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2016","55"));
-            examGradeOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","13.05.2016","55"));
+            examGradeOfPreps.add(new ExamDatesOfPrep("Başarı Sınavı::","21.05.2016","55"));
+            examGradeOfPreps.add(new ExamDatesOfPrep("Proje Çalışması:","13.05.2016","55"));
+            examGradeOfPreps.add(new ExamDatesOfPrep("Konuşma Sınavı:","21.05.2016","55"));
+            examGradeOfPreps.add(new ExamDatesOfPrep("Dilin Kullanımı Sınavı 3:","13.05.2016","55"));
+            examGradeOfPreps.add(new ExamDatesOfPrep("Başarı Sınavı 2:","21.05.2016","55"));
+            examGradeOfPreps.add(new ExamDatesOfPrep("Dilin Kullanımı Sınavı 2","13.05.2016","55"));
+            examGradeOfPreps.add(new ExamDatesOfPrep("Başarı Sınavı 3:","21.05.2016","55"));
+            examGradeOfPreps.add(new ExamDatesOfPrep("Dilin Kullanımı Sınavı 1:","13.05.2016","55"));
             ExamGradeAdapterOfPrep adapterOfPrep = new ExamGradeAdapterOfPrep(this, examGradeOfPreps);
             lv.setAdapter(adapterOfPrep);
         }

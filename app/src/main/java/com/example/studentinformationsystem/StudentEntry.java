@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -15,6 +16,10 @@ import java.util.Random;
 public class StudentEntry extends AppCompatActivity {
     Button btnEntry;
     ImageButton randomButton;
+    EditText dogrulama;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +36,9 @@ public class StudentEntry extends AppCompatActivity {
             }
         });
 
+
+
+
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,6 +50,7 @@ public class StudentEntry extends AppCompatActivity {
 
                 bilgi = randomSayi.toString() +" + "+ randomSayi2.toString();
                 sayilarToplami.setText(bilgi);
+
             }
         };
         randomButton = findViewById(R.id.refreshButton);
