@@ -40,6 +40,9 @@
     <string name="textOgretimGorevlisi">Öğretim Görevlisi</string>
     <string name="textHarfNotu">Harf Notu</string>
     <string name="textDurumu">Durumu</string>
+    <string name="textAlan">Önlisans/Lisans/Enstitü</string>
+    <string name="btnOgrenciGirisi">Öğrenci Girişi</string>
+    <string name="btnAkademisyenGirisi">Akademisyen Girişi</string>
 
     <string-array name="terms">
         <item>2018—2019 Bahar</item>

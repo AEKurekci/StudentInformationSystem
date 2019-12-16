@@ -31,21 +31,21 @@
                 android:id="@+id/txtTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="MUĞLA"
+                android:text="@string/textMugla"
                 android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/txtTitle2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="SITKI KOÇMAN ÜNİVERSİTESİ"
+                android:text="@string/textUniversityName"
                 android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/txtTitle3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Öğrenci Bilgi Sistemi"
+                android:text="@string/textStudentInformationSystem"
                 android:textAlignment="center" />
         </LinearLayout>
 
@@ -73,7 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Önlisans/Lisans/Enstitü"
+                android:text="@string/textAlan"
                 android:textAlignment="center" />
         </TableRow>
 
@@ -86,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Öğrenci Girişi" />
+                android:text="@string/btnOgrenciGirisi" />
         </TableRow>
 
         <TableRow
@@ -98,7 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Akademisyen Girişi" />
+                android:text="@string/btnAkademisyenGirisi" />
         </TableRow>
 
     </TableLayout>
