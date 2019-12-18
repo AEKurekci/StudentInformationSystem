@@ -31,12 +31,20 @@ public class StudentEntry extends AppCompatActivity {
     EditText txtPassword;
 
     TextView txtPostaUzn;
+    TextView txtSecureCode;
 
     String strEmail;
     String strPassword;
 
     private FirebaseAuth mAuth;
     private String TAG = "Authentication";
+
+    Random randomNumberCreater = new Random();
+    Integer RANDOM_NUMBER_1;
+    Integer RANDOM_NUMBER_2;
+
+    String randomToShowforUser;
+    TextView sumOfRandoms;
 
     @Override
     protected void onStart() {
@@ -52,11 +60,12 @@ public class StudentEntry extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        txtEmail = (EditText) findViewById(R.id.edtPosta);
-        txtPassword = (EditText) findViewById(R.id.edtPassword);
+        txtEmail = findViewById(R.id.edtPosta);
+        txtPassword = findViewById(R.id.edtPassword);
         txtPostaUzn = findViewById(R.id.txtPostaUzantisi);
+        txtSecureCode = findViewById(R.id.edtSecureCode);
 
-        final TextView sayilarToplami  = (TextView) findViewById(R.id.textView6);
+        sumOfRandoms = findViewById(R.id.txtShowingRandom);
 
         btnEntry = findViewById(R.id.btnEntry);
         btnEntry.setOnClickListener(new View.OnClickListener() {
@@ -64,31 +73,40 @@ public class StudentEntry extends AppCompatActivity {
             public void onClick(View v) {
                 strEmail = txtEmail.getText().toString() + "" + txtPostaUzn.getText().toString();
                 strPassword = txtPassword.getText().toString();
-                Log.d("AEK",strEmail);
-                Log.d("AEK",strPassword);
-                signIn(strEmail,strPassword);
+                if(checkRandoms())
+                    signIn(strEmail,strPassword);
             }
         });
 
+        RANDOM_NUMBER_1 = randomNumberCreater.nextInt(99);
+        RANDOM_NUMBER_2 = randomNumberCreater.nextInt(99);
 
-
+        randomToShowforUser = RANDOM_NUMBER_1.toString() +" + "+ RANDOM_NUMBER_2.toString();
+        sumOfRandoms.setText(randomToShowforUser);
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String bilgi = "";
-                Random randomSayiOlusturucu = new Random();
+                RANDOM_NUMBER_1 = randomNumberCreater.nextInt(99);
+                RANDOM_NUMBER_2 = randomNumberCreater.nextInt(99);
 
-                Integer randomSayi = randomSayiOlusturucu.nextInt(99);
-                Integer randomSayi2 = randomSayiOlusturucu.nextInt(99);
-
-                bilgi = randomSayi.toString() +" + "+ randomSayi2.toString();
-                sayilarToplami.setText(bilgi);
+                randomToShowforUser = RANDOM_NUMBER_1.toString() +" + "+ RANDOM_NUMBER_2.toString();
+                sumOfRandoms.setText(randomToShowforUser);
 
             }
         };
         randomButton = findViewById(R.id.refreshButton);
         randomButton.setOnClickListener(listener);
+    }
+
+    private boolean checkRandoms() {
+        String code = txtSecureCode.getText().toString();
+        Integer sum = RANDOM_NUMBER_1 + RANDOM_NUMBER_2;
+        Integer codeInt = Integer.parseInt(code);
+        if (sum.equals(codeInt))
+            return true;
+        else
+            return false;
     }
 
     public void signIn(String email, String password){
@@ -124,7 +142,6 @@ public class StudentEntry extends AppCompatActivity {
         boolean valid = true;
 
         String email = txtEmail.getText().toString();
-        Log.d("AEK",email);
         if (TextUtils.isEmpty(email)) {
             txtEmail.setError("Required.");
             valid = false;
@@ -133,7 +150,6 @@ public class StudentEntry extends AppCompatActivity {
         }
 
         String password = txtPassword.getText().toString();
-        Log.d("AEK",password);
         if (TextUtils.isEmpty(password)) {
             txtPassword.setError("Required.");
             valid = false;
