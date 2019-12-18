@@ -89,7 +89,7 @@ public class StudentEntry extends AppCompatActivity {
         });
     }
 
-    public void randomNumberCreate(){
+    private void randomNumberCreate(){
         //created 2 random numbers
         RANDOM_NUMBER_1 = randomNumberCreater.nextInt(99);
         RANDOM_NUMBER_2 = randomNumberCreater.nextInt(99);
@@ -103,6 +103,7 @@ public class StudentEntry extends AppCompatActivity {
         if (!validateForm())
             return false;
 
+        Log.d("AEK","checkRandoms");
         String code = txtSecureCode.getText().toString();
         Integer sum = RANDOM_NUMBER_1 + RANDOM_NUMBER_2;
         Integer codeInt = Integer.parseInt(code);
