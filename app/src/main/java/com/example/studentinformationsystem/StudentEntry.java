@@ -78,28 +78,31 @@ public class StudentEntry extends AppCompatActivity {
             }
         });
 
+        randomNumberCreate();
+        //make new randoms
+        randomButton = findViewById(R.id.refreshButton);
+        randomButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                randomNumberCreate();
+            }
+        });
+    }
+
+    public void randomNumberCreate(){
+        //created 2 random numbers
         RANDOM_NUMBER_1 = randomNumberCreater.nextInt(99);
         RANDOM_NUMBER_2 = randomNumberCreater.nextInt(99);
 
+        //set to TextView
         randomToShowforUser = RANDOM_NUMBER_1.toString() +" + "+ RANDOM_NUMBER_2.toString();
         sumOfRandoms.setText(randomToShowforUser);
-
-        View.OnClickListener listener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                RANDOM_NUMBER_1 = randomNumberCreater.nextInt(99);
-                RANDOM_NUMBER_2 = randomNumberCreater.nextInt(99);
-
-                randomToShowforUser = RANDOM_NUMBER_1.toString() +" + "+ RANDOM_NUMBER_2.toString();
-                sumOfRandoms.setText(randomToShowforUser);
-
-            }
-        };
-        randomButton = findViewById(R.id.refreshButton);
-        randomButton.setOnClickListener(listener);
     }
 
     private boolean checkRandoms() {
+        if (!validateForm())
+            return false;
+
         String code = txtSecureCode.getText().toString();
         Integer sum = RANDOM_NUMBER_1 + RANDOM_NUMBER_2;
         Integer codeInt = Integer.parseInt(code);
@@ -155,6 +158,14 @@ public class StudentEntry extends AppCompatActivity {
             valid = false;
         } else {
             txtPassword.setError(null);
+        }
+
+        String secureCode = txtSecureCode.getText().toString();
+        if (TextUtils.isEmpty(secureCode)) {
+            txtSecureCode.setError("Required.");
+            valid = false;
+        } else {
+            txtSecureCode.setError(null);
         }
 
         return valid;
