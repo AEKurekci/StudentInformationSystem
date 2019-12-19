@@ -38,7 +38,8 @@ public class MainPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
         Bundle bundle = getIntent().getExtras();
-        user = bundle.getParcelable("theUser");
+        if (bundle != null)
+            user = bundle.getParcelable("theUser");
 
         btnMessage = findViewById(R.id.btnMessage);
         btnMessage.setOnClickListener(new View.OnClickListener() {
