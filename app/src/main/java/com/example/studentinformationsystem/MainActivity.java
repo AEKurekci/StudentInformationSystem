@@ -9,6 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    private boolean startFromAuthentication = false;
     Button btnStd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +20,13 @@ public class MainActivity extends AppCompatActivity {
         btnStd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, StudentEntry.class);
-                startActivity(intent);
+                if (startFromAuthentication) {
+                    Intent intent = new Intent(MainActivity.this, StudentEntry.class);
+                    startActivity(intent);
+                }else {
+                    Intent intent = new Intent(MainActivity.this, MainPage.class);
+                    startActivity(intent);
+                }
             }
         });
     }
