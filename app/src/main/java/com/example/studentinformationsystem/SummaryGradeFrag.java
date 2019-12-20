@@ -24,7 +24,7 @@ import java.util.Map;
 
 public class SummaryGradeFrag extends Fragment {
 
-    private List<Nots> nots = new ArrayList<>();
+    final List<Nots> nots = new ArrayList<>();
     private Map<String, Object> datasFromDatabase = new HashMap<>();
 
     private Map<String, Object> data = new HashMap<>();
