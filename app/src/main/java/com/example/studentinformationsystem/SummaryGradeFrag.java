@@ -25,48 +25,31 @@ import java.util.Map;
 public class SummaryGradeFrag extends Fragment {
 
     final List<Nots> nots = new ArrayList<>();
+
     private Map<String, Object> datasFromDatabase = new HashMap<>();
-
     private Map<String, Object> data = new HashMap<>();
-
     private String TAG = "FirebaseSummaryGrade";
+
+
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        DocumentReference docUser = db.collection("160709031").document("SummaryGrade");
-        docUser.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful()){
-                    DocumentSnapshot document = task.getResult();
-                    if (document.exists()) {
-                        Log.d(TAG, document.getId() + "=>" + document.getData());
-                        datasFromDatabase = document.getData();
-                        if (datasFromDatabase.get("Algorithm") != null) {
-                            Log.d("AEK","inNotNull");
-                            data = (Map<String, Object>) datasFromDatabase.get("Algorithm");
-                            nots.add(new Nots("Algorithm",Integer.parseInt(data.get("vize").toString()),
-                                    Integer.parseInt(data.get("final").toString()), data.get("harfNotu").toString(),
-                                    data.get("durumu").toString()));
-                            Log.d("NOTIN",nots.get(0).toString());
-                        }
-                    }else{
-                        Log.w(TAG, "No such document");
-                    }
-                }else {
-                    Log.e(TAG,"Error Getting Documents.", task.getException());
-                }
-            }
-        });
+        MainPage mainPage = new MainPage();
 
+        if (mainPage.summaryGradeData.get("Algorithm") != null) {
+            data = (Map<String, Object>) mainPage.summaryGradeData.get("Algorithm");
+            nots.add(new Nots("Algorithm",Integer.parseInt(data.get("vize").toString()),
+                    Integer.parseInt(data.get("final").toString()), data.get("harfNotu").toString(),
+                    data.get("durumu").toString()));
+            Log.d("NOTIN",nots.get(0).toString());
+        }
         //nots.add(new Nots("Algorithm",65,75,"BB","Geçti"));
         nots.add(new Nots("Grafical User Interface",75,85,"AA","Geçti"));
         nots.add(new Nots("Artificial Intelligence",45,65,"CB","Geçti"));
         nots.add(new Nots("Siber Security",15,45,"FF","Kaldı"));
         nots.add(new Nots("Network",62,70,"BA","Geçti"));
         Log.d("NOT",nots.get(0).toString());
-
     }
 
     @Nullable
