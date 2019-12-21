@@ -1,16 +1,42 @@
 package com.example.studentinformationsystem;
 
+import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.util.FitPolicy;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.io.BufferedInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URL;
+import java.net.URLConnection;
+
 public class Syllabus extends AppCompatActivity {
+
+    ProgressDialog PD;
+
+    FloatingActionButton fabDownload;
+
+    //Permissions
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+    private static String[] PERMISSIONS_STORAGE = {
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,13 +59,20 @@ public class Syllabus extends AppCompatActivity {
                 .pageFitPolicy(FitPolicy.WIDTH) // mode to fit pages in the view
                 .load();
 
-        FloatingActionButton fabDownload = findViewById(R.id.fabDownloadOfSyllabus);
+        fabDownload = findViewById(R.id.fabDownloadOfSyllabus);
 
         fabDownload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent i = new Intent(Transcript.this, MainPage.class);
-                //startActivity(i);
+                int permission = ActivityCompat.checkSelfPermission(Syllabus.this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE);
+                if (permission != PackageManager.PERMISSION_GRANTED){
+                    ActivityCompat.requestPermissions(Syllabus.this, PERMISSIONS_STORAGE,
+                            REQUEST_EXTERNAL_STORAGE);
+                }
+                Syllabus.DownloadTask task = new Syllabus.DownloadTask();
+                String url = "https://i.hizliresim.com/7B4Wvm.jpg";
+                task.execute(url);
             }
         });
 
@@ -52,5 +85,72 @@ public class Syllabus extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+
+    class DownloadTask extends AsyncTask<String, Integer, Bitmap> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            PD = new ProgressDialog(Syllabus.this);
+            PD.setMax(100);
+            PD.setIndeterminate(false);
+            PD.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            PD.setTitle("Downloading");
+            PD.setMessage("Please wait...");
+            PD.show();
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... progress) {
+            super.onProgressUpdate(progress);
+            PD.setProgress(progress[0]);
+        }
+
+        @Override
+        protected Bitmap doInBackground(String... urls) {
+            String fileName = "tempSyllabus.jpg";
+            String pdfPath = (Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS))
+                    .toString() + "/" + fileName;
+
+            Bitmap pdfImage = downloadFile(urls[0], pdfPath);
+
+            return pdfImage;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            super.onPostExecute(bitmap);
+            PD.dismiss();
+        }
+
+        private Bitmap downloadFile(String strURL, String pdfPath){
+            try {
+                URL url = new URL(strURL);
+                URLConnection connection = url.openConnection();
+                connection.connect();
+
+                int fileSize = connection.getContentLength();
+                InputStream input = new BufferedInputStream(url.openStream(), 8192);
+                OutputStream output = new FileOutputStream(pdfPath);
+
+                byte data[] = new byte[1024];
+                long total = 0;
+                int count;
+                while ((count = input.read(data)) != -1){
+                    output.write(data, 0, count);
+                    total += count;
+
+                    int percentage = (int)(((double) total / fileSize)*100);
+
+                    publishProgress(percentage);
+                }
+                output.close();
+                input.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return  BitmapFactory.decodeFile(pdfPath);
+        }
     }
 }
