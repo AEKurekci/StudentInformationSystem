@@ -44,11 +44,27 @@
     <string name="btnOgrenciGirisi">Öğrenci Girişi</string>
     <string name="btnAkademisyenGirisi">Akademisyen Girişi</string>
     <string name="underConstruction">Under Construction</string>
-
+    <string name="textGondericiTipi">Gönderici Tipi</string>
+    <string name="textTitleOfMsg">Gelen Mesajlar</string>
+    <string name="textTarihAraligi">Tarih Aralığı</string>
+    <string name="textDash"> - </string>
     <string-array name="terms">
         <item>2018—2019 Bahar</item>
         <item>2018—2019 Güz</item>
         <item>2017—2018 Bahar</item>
         <item>2017—2018 Güz</item>
+    </string-array>
+    <string-array name="gondericiTipi">
+        <item>Tümü</item>
+        <item>Danışman</item>
+        <item>2. Danışman</item>
+        <item>Alınan Dersler</item>
+        <item>Hazırlık Alınan Dersler</item>
+    </string-array>
+    <string-array name="durumu">
+        <item>Tümü</item>
+        <item>Yeni Mesajlar</item>
+        <item>Okunan Mesajlar</item>
+        <item>Silinen Mesajlar</item>
     </string-array>
 </resources>

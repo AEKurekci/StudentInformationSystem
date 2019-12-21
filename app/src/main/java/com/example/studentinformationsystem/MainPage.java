@@ -45,8 +45,8 @@ public class MainPage extends AppCompatActivity {
         btnMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent i = new Intent(MainPage.this, GradeInformation.class);
-                //startActivity(i);
+                Intent i = new Intent(MainPage.this, Messages.class);
+                startActivity(i);
             }
         });
 

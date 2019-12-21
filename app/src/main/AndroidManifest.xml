@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AcademistEntry"></activity>
+        <activity android:name=".Messages"></activity>
+        <activity android:name=".AcademistEntry" />
         <activity android:name=".AttendanceOfPrep" />
         <activity android:name=".PrepSchoolProcess" />
         <activity android:name=".ExamCalendar" />
