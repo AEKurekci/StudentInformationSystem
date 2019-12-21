@@ -43,6 +43,7 @@
     <string name="textAlan">Önlisans/Lisans/Enstitü</string>
     <string name="btnOgrenciGirisi">Öğrenci Girişi</string>
     <string name="btnAkademisyenGirisi">Akademisyen Girişi</string>
+    <string name="underConstruction">Under Construction</string>
 
     <string-array name="terms">
         <item>2018—2019 Bahar</item>
