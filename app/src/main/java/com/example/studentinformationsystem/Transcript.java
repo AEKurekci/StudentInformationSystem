@@ -100,7 +100,7 @@ public class Transcript extends AppCompatActivity {
             PD = new ProgressDialog(Transcript.this);
             PD.setMax(100);
             PD.setIndeterminate(false);
-            PD.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+            PD.setProgressStyle(ProgressDialog.STYLE_SPINNER);
             PD.setTitle("Downloading");
             PD.setMessage("Please wait...");
             PD.show();
@@ -126,14 +126,7 @@ public class Transcript extends AppCompatActivity {
         @Override
         protected void onPostExecute(Bitmap bitmap) {
             super.onPostExecute(bitmap);
-
-            float w = bitmap.getWidth();
-            float h = bitmap.getHeight();
-            int W = 400;
-            int H = (int) ((h * W) / w);
-
             PD.dismiss();
-            //Bitmap b = Bitmap.createScaledBitmap(bitmap, W, H, false);
         }
 
         private Bitmap downloadFile(String strURL, String pdfPath){
