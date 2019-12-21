@@ -71,12 +71,12 @@
         android:id="@+id/attendanceList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.25" />
+        android:layout_weight="0.4" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.9">
+        android:layout_weight="1">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabBackAttendance"
