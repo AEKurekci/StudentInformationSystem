@@ -48,7 +48,7 @@ public class AttendanceAdapter extends BaseAdapter {
         tvClassName.setText(attendanceInfo.getClassName());
         Float credit = attendanceInfo.getCredit();
         tvCredit.setText(credit.toString());
-        Short classNo = attendanceInfo.getClassNo();
+        Integer classNo = attendanceInfo.getClassNo();
         tvClassNo.setText(classNo.toString());
         Integer hours = attendanceInfo.getAttendanceHours();
         tvHours.setText(hours.toString());

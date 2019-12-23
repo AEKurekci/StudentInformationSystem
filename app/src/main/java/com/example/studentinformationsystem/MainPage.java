@@ -44,9 +44,11 @@ public class MainPage extends AppCompatActivity implements Parcelable {
     ArrayList<Button> lButtons = new ArrayList<>();
     Map<String, Object> summaryGradeData = new HashMap<>();
     Map<String, Object> detailedGradeData = new HashMap<>();
+    Map<String, Object> attendanceMap = new HashMap<>();
 
     Bundle bundleForSummaryGrade;
     Bundle bundleForDetailedGrade;
+    Bundle bundleForAttendance;
 
     FirebaseFirestore db;
     DocumentReference docUserReference;
@@ -65,6 +67,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
         }else {
             bundleForSummaryGrade = new Bundle();
             bundleForDetailedGrade = new Bundle();
+            bundleForAttendance = new Bundle();
         }
 
         db = FirebaseFirestore.getInstance();
@@ -105,10 +108,28 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                 }
             }
         });
+        docUserReference = colUserReference.document("Attendance");
+        docUserReference = docUserReference.collection("2018-2019").document("Bahar");
+        docUserReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if(task.isSuccessful()){
+                    DocumentSnapshot documentSnapshot = task.getResult();
+                    if (documentSnapshot.exists()){
+                        attendanceMap = documentSnapshot.getData();
+                        bundleForAttendance.putSerializable("attendanceSeri", (Serializable) attendanceMap);
+                    }else {
+                        Log.w(TAG, "No such document");
+                    }
+                }{
+                    Log.e(TAG,"Error Getting Documents.", task.getException());
+                }
+            }
+        });
 
-        Bundle bundle = getIntent().getExtras();
-        if (bundle != null)
-            user = bundle.getParcelable("theUser");
+        Bundle bundleForUserNumber = getIntent().getExtras();
+        if (bundleForUserNumber != null)
+            user = bundleForUserNumber.getParcelable("theUser");
 
         btnMessage = findViewById(R.id.btnMessage);
         btnMessage.setOnClickListener(new View.OnClickListener() {
@@ -151,6 +172,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainPage.this, Attendance.class);
+                i.putExtra("attendance", bundleForAttendance);
                 startActivity(i);
             }
         });

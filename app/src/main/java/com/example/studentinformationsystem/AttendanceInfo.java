@@ -3,10 +3,10 @@ package com.example.studentinformationsystem;
 class AttendanceInfo {
     private String className;
     private float credit;
-    private short classNo;
+    private int classNo;
     private int attendanceHours;
 
-    public AttendanceInfo(String className, float credit, short classNo, int attendanceHours){
+    public AttendanceInfo(String className, float credit, int classNo, int attendanceHours){
         this.className = className;
         this.credit = credit;
         this.classNo = classNo;
@@ -29,7 +29,7 @@ class AttendanceInfo {
         this.credit = credit;
     }
 
-    public short getClassNo() {
+    public int getClassNo() {
         return classNo;
     }
 
