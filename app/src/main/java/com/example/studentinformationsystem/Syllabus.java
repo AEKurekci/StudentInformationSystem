@@ -45,7 +45,6 @@ public class Syllabus extends AppCompatActivity {
         setContentView(R.layout.activity_syllabus);
         Intent i = getIntent();
         link = i.getStringExtra("syllabusLink");
-        Log.d("Link", link);
 
         PDFView pdfView = findViewById(R.id.pdfViewOfSyllabus);
         pdfView.fromAsset("mufredatDurumu.pdf")

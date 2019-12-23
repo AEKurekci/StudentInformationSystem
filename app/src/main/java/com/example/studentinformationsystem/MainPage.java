@@ -45,10 +45,12 @@ public class MainPage extends AppCompatActivity implements Parcelable {
     Map<String, Object> summaryGradeData = new HashMap<>();
     Map<String, Object> detailedGradeData = new HashMap<>();
     Map<String, Object> attendanceMap = new HashMap<>();
+    Map<String, Object> eventMap = new HashMap<>();
 
     Bundle bundleForSummaryGrade;
     Bundle bundleForDetailedGrade;
     Bundle bundleForAttendance;
+    Bundle bundleForAcademicCal;
 
     String linkOfTranscript;
     String linkOfSyllabus;
@@ -71,6 +73,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
             bundleForSummaryGrade = new Bundle();
             bundleForDetailedGrade = new Bundle();
             bundleForAttendance = new Bundle();
+            bundleForAcademicCal = new Bundle();
         }
 
         db = FirebaseFirestore.getInstance();
@@ -164,6 +167,25 @@ public class MainPage extends AppCompatActivity implements Parcelable {
             }
         });
 
+        docUserReference = colUserReference.document("AcademicCalendar");
+        docUserReference = docUserReference.collection("2018-2019").document("Bahar");
+        docUserReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if(task.isSuccessful()){
+                    DocumentSnapshot documentSnapshot = task.getResult();
+                    if (documentSnapshot.exists()){
+                        eventMap = documentSnapshot.getData();
+                        bundleForAcademicCal.putSerializable("academicCalendar", (Serializable) eventMap);
+                    }else {
+                        Log.w(TAG, "No such document");
+                    }
+                }else{
+                    Log.e(TAG,"Error Getting Documents.", task.getException());
+                }
+            }
+        });
+
         Bundle bundleForUserNumber = getIntent().getExtras();
         if (bundleForUserNumber != null)
             user = bundleForUserNumber.getParcelable("theUser");
@@ -227,6 +249,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainPage.this,AcademicCalendar.class);
+                i.putExtra("academic", bundleForAcademicCal);
                 startActivity(i);
             }
         });
