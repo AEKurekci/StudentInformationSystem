@@ -54,12 +54,31 @@ public class SummaryGradeFrag extends Fragment {
                     data.get("durumu").toString()));
             Log.d("NOTIN",nots.get(0).toString());
         }
-        //nots.add(new Nots("Algorithm",65,75,"BB","Geçti"));
-        nots.add(new Nots("Grafical User Interface",75,85,"AA","Geçti"));
-        nots.add(new Nots("Artificial Intelligence",45,65,"CB","Geçti"));
-        nots.add(new Nots("Siber Security",15,45,"FF","Kaldı"));
-        nots.add(new Nots("Network",62,70,"BA","Geçti"));
-        Log.d("NOT",nots.get(0).toString());
+        if (datasFromDatabase.get("Grafical User Interface") != null) {
+            data = (Map<String, Object>) datasFromDatabase.get("Grafical User Interface");
+            nots.add(new Nots("Grafical User Interface",Integer.parseInt(data.get("vize").toString()),
+                    Integer.parseInt(data.get("final").toString()), data.get("harfNotu").toString(),
+                    data.get("durumu").toString()));
+            Log.d("NOTIN",nots.get(0).toString());
+        }
+        if (datasFromDatabase.get("Artificial Intelligence") != null) {
+            data = (Map<String, Object>) datasFromDatabase.get("Artificial Intelligence");
+            nots.add(new Nots("Artificial Intelligence",Integer.parseInt(data.get("vize").toString()),
+                    Integer.parseInt(data.get("final").toString()), data.get("harfNotu").toString(),
+                    data.get("durumu").toString()));
+        }
+        if (datasFromDatabase.get("Computer Network") != null) {
+            data = (Map<String, Object>) datasFromDatabase.get("Computer Network");
+            nots.add(new Nots("Computer Network",Integer.parseInt(data.get("vize").toString()),
+                    Integer.parseInt(data.get("final").toString()), data.get("harfNotu").toString(),
+                    data.get("durumu").toString()));
+        }
+        if (datasFromDatabase.get("Cyber Security") != null) {
+            data = (Map<String, Object>) datasFromDatabase.get("Cyber Security");
+            nots.add(new Nots("Cyber Security",Integer.parseInt(data.get("vize").toString()),
+                    Integer.parseInt(data.get("final").toString()), data.get("harfNotu").toString(),
+                    data.get("durumu").toString()));
+        }
         final ListView lv = (ListView) view.findViewById(R.id.listGrades);
 
         SummaryAdapter adapter = new SummaryAdapter(SummaryGradeFrag.this, nots);
