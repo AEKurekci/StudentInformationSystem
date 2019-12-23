@@ -9,6 +9,7 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,7 +29,7 @@ import java.net.URLConnection;
 public class Syllabus extends AppCompatActivity {
 
     ProgressDialog PD;
-
+    String link;
     FloatingActionButton fabDownload;
 
     //Permissions
@@ -42,6 +43,9 @@ public class Syllabus extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_syllabus);
+        Intent i = getIntent();
+        link = i.getStringExtra("syllabusLink");
+        Log.d("Link", link);
 
         PDFView pdfView = findViewById(R.id.pdfViewOfSyllabus);
         pdfView.fromAsset("mufredatDurumu.pdf")
@@ -71,8 +75,7 @@ public class Syllabus extends AppCompatActivity {
                             REQUEST_EXTERNAL_STORAGE);
                 }
                 Syllabus.DownloadTask task = new Syllabus.DownloadTask();
-                String url = "https://i.hizliresim.com/7B4Wvm.jpg";
-                task.execute(url);
+                task.execute(link);
             }
         });
 

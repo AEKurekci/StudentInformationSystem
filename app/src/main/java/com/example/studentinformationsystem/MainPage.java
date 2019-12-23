@@ -51,6 +51,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
     Bundle bundleForAttendance;
 
     String linkOfTranscript;
+    String linkOfSyllabus;
 
     FirebaseFirestore db;
     DocumentReference docUserReference;
@@ -146,6 +147,23 @@ public class MainPage extends AppCompatActivity implements Parcelable {
             }
         });
 
+        docUserReference = colUserReference.document("Syllabus");
+        docUserReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if(task.isSuccessful()){
+                    DocumentSnapshot documentSnapshot = task.getResult();
+                    if (documentSnapshot.exists()){
+                        linkOfSyllabus = documentSnapshot.getString("link");
+                    }else {
+                        Log.w(TAG, "No such document");
+                    }
+                }else{
+                    Log.e(TAG,"Error Getting Documents.", task.getException());
+                }
+            }
+        });
+
         Bundle bundleForUserNumber = getIntent().getExtras();
         if (bundleForUserNumber != null)
             user = bundleForUserNumber.getParcelable("theUser");
@@ -227,6 +245,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainPage.this,Syllabus.class);
+                i.putExtra("syllabusLink", linkOfSyllabus);
                 startActivity(i);
             }
         });

@@ -51,7 +51,6 @@ public class Transcript extends AppCompatActivity {
         setContentView(R.layout.activity_transcript);
         Intent i = getIntent();
         link = i.getStringExtra("transcriptLink");
-        Log.d("Transcript", link);
 
         PDFView pdfView = findViewById(R.id.pdfView);
         pdfView.fromAsset("transkript.pdf")
