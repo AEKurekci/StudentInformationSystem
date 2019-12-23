@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.text.Editable;
 import android.text.Spannable;
+import android.util.Log;
 import android.view.View;
 
 import com.github.barteksc.pdfviewer.PDFView;
@@ -36,6 +37,8 @@ public class Transcript extends AppCompatActivity {
 
     ProgressDialog PD;
 
+    String link;
+
     //Permissions
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static String[] PERMISSIONS_STORAGE = {
@@ -46,6 +49,9 @@ public class Transcript extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transcript);
+        Intent i = getIntent();
+        link = i.getStringExtra("transcriptLink");
+        Log.d("Transcript", link);
 
         PDFView pdfView = findViewById(R.id.pdfView);
         pdfView.fromAsset("transkript.pdf")
@@ -75,8 +81,7 @@ public class Transcript extends AppCompatActivity {
                             REQUEST_EXTERNAL_STORAGE);
                 }
                 DownloadTask task = new DownloadTask();
-                String url = "https://i.hizliresim.com/Z50XA3.png";
-                task.execute(url);
+                task.execute(link);
             }
         });
 

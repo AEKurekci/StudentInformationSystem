@@ -50,6 +50,8 @@ public class MainPage extends AppCompatActivity implements Parcelable {
     Bundle bundleForDetailedGrade;
     Bundle bundleForAttendance;
 
+    String linkOfTranscript;
+
     FirebaseFirestore db;
     DocumentReference docUserReference;
     CollectionReference colUserReference;
@@ -121,7 +123,24 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                     }else {
                         Log.w(TAG, "No such document");
                     }
-                }{
+                }else{
+                    Log.e(TAG,"Error Getting Documents.", task.getException());
+                }
+            }
+        });
+
+        docUserReference = colUserReference.document("Transcript");
+        docUserReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if(task.isSuccessful()){
+                    DocumentSnapshot documentSnapshot = task.getResult();
+                    if (documentSnapshot.exists()){
+                        linkOfTranscript = documentSnapshot.getString("link");
+                    }else {
+                        Log.w(TAG, "No such document");
+                    }
+                }else{
                     Log.e(TAG,"Error Getting Documents.", task.getException());
                 }
             }
@@ -181,6 +200,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainPage.this,Transcript.class);
+                i.putExtra("transcriptLink",linkOfTranscript);
                 startActivity(i);
             }
         });
