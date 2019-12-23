@@ -16,9 +16,13 @@ import android.widget.ListView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.model.DocumentCollections;
+
+import org.w3c.dom.Document;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -42,7 +46,15 @@ public class MainPage extends AppCompatActivity implements Parcelable {
     ListView listBtn;
     ArrayList<Button> lButtons = new ArrayList<>();
     Map<String, Object> summaryGradeData = new HashMap<>();
+    Map<String, Object> detailedGradeData = new HashMap<>();
+
     Bundle bundleForSummaryGrade;
+    Bundle bundleForDetailedGrade;
+
+    FirebaseFirestore db;
+    DocumentReference docUserReference;
+    CollectionReference colUserReference;
+
     private String TAG = "MainPageData";
 
     @Override
@@ -55,12 +67,13 @@ public class MainPage extends AppCompatActivity implements Parcelable {
             //bundleForSummaryGrade = savedInstanceState.getBundle("summaryInBundle");
         }else {
             bundleForSummaryGrade = new Bundle();
-
+            bundleForDetailedGrade = new Bundle();
         }
 
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        DocumentReference docUser = db.collection("160709031").document("SummaryGrade");
-        docUser.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+        db = FirebaseFirestore.getInstance();
+        colUserReference = db.collection("160709031");
+        docUserReference = colUserReference.document("SummaryGrade");
+        docUserReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if (task.isSuccessful()){
@@ -71,6 +84,27 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                         bundleForSummaryGrade.putSerializable("summaryGrade", (Serializable) summaryGradeData);
                         summaryGradeData = (Map<String, Object>) bundleForSummaryGrade.getSerializable("summaryGrade");
                         Log.d("AEK",summaryGradeData.get("Algorithm").toString());
+                    }else{
+                        Log.w(TAG, "No such document");
+                    }
+                }else {
+                    Log.e(TAG,"Error Getting Documents.", task.getException());
+                }
+            }
+        });
+        docUserReference = colUserReference.document("Detailed Grade");
+        docUserReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()){
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        Log.d(TAG, document.getId() + "=>" + document.getData());
+                        detailedGradeData = document.getData();
+                        Log.d("AEK",detailedGradeData.get("Algorithm").toString());
+                        bundleForDetailedGrade.putSerializable("detailedGrade", (Serializable) detailedGradeData);
+                        detailedGradeData = (Map<String, Object>) bundleForDetailedGrade.getSerializable("detailedGrade");
+                        Log.d("AEK",detailedGradeData.get("Algorithm").toString());
                     }else{
                         Log.w(TAG, "No such document");
                     }
