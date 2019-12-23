@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -18,11 +20,12 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MainPage extends AppCompatActivity {
+public class MainPage extends AppCompatActivity implements Parcelable {
     Button btnNot;
     Button btnDevam;
     Button btnTranscript;
@@ -39,12 +42,21 @@ public class MainPage extends AppCompatActivity {
     ListView listBtn;
     ArrayList<Button> lButtons = new ArrayList<>();
     Map<String, Object> summaryGradeData = new HashMap<>();
+    Bundle bundleForSummaryGrade;
     private String TAG = "MainPageData";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
+
+        if (savedInstanceState != null){
+            summaryGradeData = savedInstanceState.getParcelable("summary");
+            //bundleForSummaryGrade = savedInstanceState.getBundle("summaryInBundle");
+        }else {
+            bundleForSummaryGrade = new Bundle();
+
+        }
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         DocumentReference docUser = db.collection("160709031").document("SummaryGrade");
@@ -56,6 +68,8 @@ public class MainPage extends AppCompatActivity {
                     if (document.exists()) {
                         Log.d(TAG, document.getId() + "=>" + document.getData());
                         summaryGradeData = document.getData();
+                        bundleForSummaryGrade.putSerializable("summaryGrade", (Serializable) summaryGradeData);
+                        summaryGradeData = (Map<String, Object>) bundleForSummaryGrade.getSerializable("summaryGrade");
                         Log.d("AEK",summaryGradeData.get("Algorithm").toString());
                     }else{
                         Log.w(TAG, "No such document");
@@ -65,7 +79,6 @@ public class MainPage extends AppCompatActivity {
                 }
             }
         });
-
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null)
@@ -102,6 +115,7 @@ public class MainPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainPage.this, GradeInformation.class);
+                i.putExtra("summaryGrade", bundleForSummaryGrade);
                 startActivity(i);
             }
         });
@@ -169,4 +183,50 @@ public class MainPage extends AppCompatActivity {
         ButtonAdaptor adaptor = new ButtonAdaptor(this, lButtons);
         listView.setAdapter(adaptor);
     }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBundle("summaryInBundle", bundleForSummaryGrade);
+        //outState.putParcelable("summary", (Parcelable) summaryGradeData);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(this.summaryGradeData.size());
+        for (Map.Entry<String, Object> entry : this.summaryGradeData.entrySet()) {
+            dest.writeString(entry.getKey());
+            dest.writeParcelable((Parcelable) entry.getValue(), flags);
+        }
+    }
+
+    public MainPage() {
+    }
+
+    protected MainPage(Parcel in) {
+        int summaryGradeDataSize = in.readInt();
+        this.summaryGradeData = new HashMap<String, Object>(summaryGradeDataSize);
+        for (int i = 0; i < summaryGradeDataSize; i++) {
+            String key = in.readString();
+            Object value = in.readParcelable(Object.class.getClassLoader());
+            this.summaryGradeData.put(key, value);
+        }
+    }
+
+    public static final Parcelable.Creator<MainPage> CREATOR = new Parcelable.Creator<MainPage>() {
+        @Override
+        public MainPage createFromParcel(Parcel source) {
+            return new MainPage(source);
+        }
+
+        @Override
+        public MainPage[] newArray(int size) {
+            return new MainPage[size];
+        }
+    };
 }

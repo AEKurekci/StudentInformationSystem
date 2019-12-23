@@ -29,16 +29,26 @@ public class SummaryGradeFrag extends Fragment {
     private Map<String, Object> datasFromDatabase = new HashMap<>();
     private Map<String, Object> data = new HashMap<>();
     private String TAG = "FirebaseSummaryGrade";
-
+    private Bundle bundle;
 
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MainPage mainPage = new MainPage();
+        //Log.d("AEK", b.toString());
 
-        if (mainPage.summaryGradeData.get("Algorithm") != null) {
-            data = (Map<String, Object>) mainPage.summaryGradeData.get("Algorithm");
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.summary_grade_layout, container, false);
+
+        bundle = getArguments();
+        datasFromDatabase = (Map<String, Object>) bundle.getSerializable("summaryGrade");
+        Log.d("AEK",datasFromDatabase.get("Algorithm").toString());
+        if (datasFromDatabase.get("Algorithm") != null) {
+            data = (Map<String, Object>) datasFromDatabase.get("Algorithm");
             nots.add(new Nots("Algorithm",Integer.parseInt(data.get("vize").toString()),
                     Integer.parseInt(data.get("final").toString()), data.get("harfNotu").toString(),
                     data.get("durumu").toString()));
@@ -50,13 +60,6 @@ public class SummaryGradeFrag extends Fragment {
         nots.add(new Nots("Siber Security",15,45,"FF","Kaldı"));
         nots.add(new Nots("Network",62,70,"BA","Geçti"));
         Log.d("NOT",nots.get(0).toString());
-    }
-
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.summary_grade_layout, container, false);
-
         final ListView lv = (ListView) view.findViewById(R.id.listGrades);
 
         SummaryAdapter adapter = new SummaryAdapter(SummaryGradeFrag.this, nots);
