@@ -25,11 +25,13 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2};
     private final Context mContext;
     private Bundle summaryGradeInfo;
+    private Bundle detailedGradeInfo;
 
-    public SectionsPagerAdapter(Context context, FragmentManager fm, Bundle summaryGradeInfo) {
+    public SectionsPagerAdapter(Context context, FragmentManager fm, Bundle summaryGradeInfo, Bundle detailedGradeInfo) {
         super(fm);
         mContext = context;
         this.summaryGradeInfo = summaryGradeInfo;
+        this.detailedGradeInfo = detailedGradeInfo;
     }
 
     @Override
@@ -44,7 +46,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 break;
             case 1:
                 frag = new DetailedGradeFrag();
-                frag.setArguments(summaryGradeInfo);
+                frag.setArguments(detailedGradeInfo);
                 break;
         }
         return frag;

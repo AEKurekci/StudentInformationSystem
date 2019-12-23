@@ -20,9 +20,6 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.model.DocumentCollections;
-
-import org.w3c.dom.Document;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -79,11 +76,9 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                 if (task.isSuccessful()){
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
-                        Log.d(TAG, document.getId() + "=>" + document.getData());
                         summaryGradeData = document.getData();
                         bundleForSummaryGrade.putSerializable("summaryGrade", (Serializable) summaryGradeData);
                         summaryGradeData = (Map<String, Object>) bundleForSummaryGrade.getSerializable("summaryGrade");
-                        Log.d("AEK",summaryGradeData.get("Algorithm").toString());
                     }else{
                         Log.w(TAG, "No such document");
                     }
@@ -99,12 +94,9 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                 if (task.isSuccessful()){
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
-                        Log.d(TAG, document.getId() + "=>" + document.getData());
                         detailedGradeData = document.getData();
-                        Log.d("AEK",detailedGradeData.get("Algorithm").toString());
                         bundleForDetailedGrade.putSerializable("detailedGrade", (Serializable) detailedGradeData);
                         detailedGradeData = (Map<String, Object>) bundleForDetailedGrade.getSerializable("detailedGrade");
-                        Log.d("AEK",detailedGradeData.get("Algorithm").toString());
                     }else{
                         Log.w(TAG, "No such document");
                     }
@@ -150,6 +142,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
             public void onClick(View v) {
                 Intent i = new Intent(MainPage.this, GradeInformation.class);
                 i.putExtra("summaryGrade", bundleForSummaryGrade);
+                i.putExtra("detailedGrade", bundleForDetailedGrade);
                 startActivity(i);
             }
         });

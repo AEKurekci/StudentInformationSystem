@@ -23,8 +23,9 @@ public class GradeInformation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grade_information);
         Intent i = getIntent();
-        Bundle b = i.getBundleExtra("summaryGrade");
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager(),b);
+        Bundle bundleSum = i.getBundleExtra("summaryGrade");
+        Bundle bundleDet = i.getBundleExtra("detailedGrade");
+        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager(),bundleSum, bundleDet);
         ViewPager viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabs);

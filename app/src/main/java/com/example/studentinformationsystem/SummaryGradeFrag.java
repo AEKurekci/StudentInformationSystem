@@ -29,8 +29,6 @@ public class SummaryGradeFrag extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Log.d("AEK", b.toString());
-
     }
 
     @Nullable

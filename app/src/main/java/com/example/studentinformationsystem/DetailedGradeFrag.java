@@ -1,6 +1,7 @@
 package com.example.studentinformationsystem;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,32 +12,76 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class DetailedGradeFrag extends Fragment {
 
     List<Nots> nots = new ArrayList<>();
+    private Map<String, Object> datasFromDatabase = new HashMap<>();
+    private Map<String, Object> data = new HashMap<>();
+    private String TAG = "FirebaseSummaryGrade";
+    private Bundle bundle;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        nots.add(new Nots("Algorithm",65,75,"BB","Geçti","CENG-3004",
-                55,"01/12/2019",4,"Dr.Tuğba Süzek"));
-        nots.add(new Nots("Grafical User Interface",75,85,"AA","Geçti","CENG-3005",
-                63,"05/12/2019",4,"Dr. Özgür Kılıç"));
-        nots.add(new Nots("Artificial Intelligence",45,65,"CB","Geçti","CENG-3030",
-                67,"04/12/2019",4,"Arş.Gör.Dr.Cihat Çetinkaya"));
-        nots.add(new Nots("Siber Security",15,45,"FF","Kaldı","CENG-3008",
-                53,"07/12/2019",4,"Öğr. Grv. Murat Sakal"));
-        nots.add(new Nots("Network",62,70,"BA","Geçti","CENG-3006",
-                54,"03/12/2019",4,"Dr. Enis Karaarslan"));
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.detailed_grade_layout, container, false);
+
+        bundle = getArguments();
+        datasFromDatabase = (Map<String, Object>) bundle.getSerializable("detailedGrade");
+        Log.d("AEK",datasFromDatabase.get("Algorithm").toString());
+        if (datasFromDatabase.get("Algorithm") != null) {
+            data = (Map<String, Object>) datasFromDatabase.get("Algorithm");
+            nots.add(new Nots("Algorithm",Integer.parseInt(data.get("vize").toString()),
+                    Integer.parseInt(data.get("final").toString()), data.get("harfNotu").toString(),
+                    data.get("durumu").toString(),data.get("dersKodu").toString(),
+                    Integer.parseInt(data.get("sinifOrtalamasi").toString()),data.get("ilanTarihi").toString(),
+                    Float.parseFloat(data.get("kredi").toString()),data.get("ogretimUyesi").toString()));
+            Log.d("NOTIN",nots.get(0).toString());
+        }
+        if (datasFromDatabase.get("Artificial Intelligence") != null) {
+            data = (Map<String, Object>) datasFromDatabase.get("Artificial Intelligence");
+            nots.add(new Nots("Artificial Intelligence",Integer.parseInt(data.get("vize").toString()),
+                    Integer.parseInt(data.get("final").toString()), data.get("harfNotu").toString(),
+                    data.get("durumu").toString(),data.get("dersKodu").toString(),
+                    Integer.parseInt(data.get("sinifOrtalamasi").toString()),data.get("ilanTarihi").toString(),
+                    Float.parseFloat(data.get("kredi").toString()),data.get("ogretimUyesi").toString()));
+            Log.d("NOTIN",nots.get(0).toString());
+        }
+        if (datasFromDatabase.get("Cyber Security") != null) {
+            data = (Map<String, Object>) datasFromDatabase.get("Cyber Security");
+            nots.add(new Nots("Cyber Security",Integer.parseInt(data.get("vize").toString()),
+                    Integer.parseInt(data.get("final").toString()), data.get("harfNotu").toString(),
+                    data.get("durumu").toString(),data.get("dersKodu").toString(),
+                    Integer.parseInt(data.get("sinifOrtalamasi").toString()),data.get("ilanTarihi").toString(),
+                    Float.parseFloat(data.get("kredi").toString()),data.get("ogretimUyesi").toString()));
+            Log.d("NOTIN",nots.get(0).toString());
+        }
+        if (datasFromDatabase.get("Graphical User Interface") != null) {
+            data = (Map<String, Object>) datasFromDatabase.get("Graphical User Interface");
+            nots.add(new Nots("Graphical User Interface",Integer.parseInt(data.get("vize").toString()),
+                    Integer.parseInt(data.get("final").toString()), data.get("harfNotu").toString(),
+                    data.get("durumu").toString(),data.get("dersKodu").toString(),
+                    Integer.parseInt(data.get("sinifOrtalamasi").toString()),data.get("ilanTarihi").toString(),
+                    Float.parseFloat(data.get("kredi").toString()),data.get("ogretimUyesi").toString()));
+            Log.d("NOTIN",nots.get(0).toString());
+        }
+        if (datasFromDatabase.get("Network") != null) {
+            data = (Map<String, Object>) datasFromDatabase.get("Network");
+            nots.add(new Nots("Network",Integer.parseInt(data.get("vize").toString()),
+                    Integer.parseInt(data.get("final").toString()), data.get("harfNotu").toString(),
+                    data.get("durumu").toString(),data.get("dersKodu").toString(),
+                    Integer.parseInt(data.get("sinifOrtalamasi").toString()),data.get("ilanTarihi").toString(),
+                    Float.parseFloat(data.get("kredi").toString()),data.get("ogretimUyesi").toString()));
+            Log.d("NOTIN",nots.get(0).toString());
+        }
 
         final ListView lv = (ListView) view.findViewById(R.id.listGradesDetailed);
 
