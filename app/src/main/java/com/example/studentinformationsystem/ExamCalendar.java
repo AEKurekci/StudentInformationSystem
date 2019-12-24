@@ -37,12 +37,11 @@ public class ExamCalendar extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         String type = extras.getString("type");
         Bundle b = extras.getBundle("examCal");
-        datasFromDatabase = (Map<String, Object>) b.getSerializable("examCalendar");
 
         ListView lv = findViewById(R.id.listOfExamDates);
 
         if(type.equals("fromMain")) {
-
+            datasFromDatabase = (Map<String, Object>) b.getSerializable("examCalendar");
             for (String lessonName : datasFromDatabase.keySet()){
                 if(datasFromDatabase.get(lessonName) != null){
                     temp = (List<String>) datasFromDatabase.get(lessonName);
