@@ -38,7 +38,6 @@ public class ExamCalendar extends AppCompatActivity {
         String type = extras.getString("type");
         Bundle b = extras.getBundle("examCal");
 
-
         ListView lv = findViewById(R.id.listOfExamDates);
 
         if(type.equals("fromMain")) {
@@ -48,7 +47,14 @@ public class ExamCalendar extends AppCompatActivity {
                     temp = (List<String>) datasFromDatabase.get(lessonName);
                     examDates.add(new ExamDates(lessonName,temp.get(0),temp.get(1)));
                 }
-            }
+            }/*
+            examDates.add(new ExamDates("GUI Programming","15/10/2019","C105"));
+            examDates.add(new ExamDates("Computer Networks","11/10/2019","B2B07"));
+            examDates.add(new ExamDates("PRINCIPLES OF KEMAL ATATURK","23/10/2019","CB09"));
+            examDates.add(new ExamDates("Design and Analysis of Algorithm","28/09/2019","C104"));
+            examDates.add(new ExamDates("Artificial Intelligence","19/10/2019","CZ04"));
+            examDates.add(new ExamDates("Software Engineering","07/10/2019","C105"));
+            examDates.add(new ExamDates("Fotografcılık","02/12/2019","FB07"));*/
             ExamCalendarAdapter adapter = new ExamCalendarAdapter(this, examDates);
             lv.setAdapter(adapter);
         }else if(type.equals("fromPrepForCal")) {
