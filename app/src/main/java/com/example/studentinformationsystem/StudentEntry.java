@@ -65,6 +65,7 @@ public class StudentEntry extends AppCompatActivity {
     TextView sumOfRandoms;
 
     Map<String, Object> emails = new HashMap<>();
+    Map<String, Object> names = new HashMap<>();
 
     Map<String, Object> summaryGradeData = new HashMap<>();
     Map<String, Object> detailedGradeData = new HashMap<>();
@@ -105,6 +106,22 @@ public class StudentEntry extends AppCompatActivity {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()){
                         emails = document.getData();
+                    }else {
+                        Log.w(TAGFire, "No such document");
+                    }
+                }else{
+                    Log.e(TAGFire,"Error Getting Documents.", task.getException());
+                }
+            }
+        });
+        docRef = colRef.document("studentName");
+        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()){
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()){
+                        names = document.getData();
                     }else {
                         Log.w(TAGFire, "No such document");
                     }
@@ -183,6 +200,7 @@ public class StudentEntry extends AppCompatActivity {
 
                             FirebaseUser user = mAuth.getCurrentUser();
                             i.putExtra("userNumber", emails.get(user.getEmail()).toString());
+                            i.putExtra("userName", names.get(user.getEmail()).toString());
                             startActivity(i);
                         } else {
                             // If sign in fails, display a message to the user.

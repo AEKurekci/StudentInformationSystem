@@ -40,6 +40,7 @@ public class Transcript extends AppCompatActivity {
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
     };
     String studentNumber;
+    String studentName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +52,7 @@ public class Transcript extends AppCompatActivity {
         Bundle bundleForUserNumber = getIntent().getExtras();
         if (bundleForUserNumber != null) {
             studentNumber = bundleForUserNumber.getString("userNumber");
+            studentName = bundleForUserNumber.getString("userName");
         }
 
         PDFView pdfView = findViewById(R.id.pdfView);
@@ -92,6 +94,7 @@ public class Transcript extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(Transcript.this, MainPage.class);
                 i.putExtra("userNumber", studentNumber);
+                i.putExtra("userName",studentName);
                 startActivity(i);
             }
         });

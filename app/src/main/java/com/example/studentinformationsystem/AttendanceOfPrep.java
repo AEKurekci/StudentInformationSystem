@@ -9,11 +9,17 @@ import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class AttendanceOfPrep extends AppCompatActivity {
 
     TextView txtAps;
     TextView txtPos;
     String studentNumber;
+    Bundle bundleFromPrep;
+    Map<String, Object> datasFromDatabaseForPrep = new HashMap<>();
+    String studentName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +28,8 @@ public class AttendanceOfPrep extends AppCompatActivity {
         Bundle bundleForUserNumber = getIntent().getExtras();
         if (bundleForUserNumber != null) {
             studentNumber = bundleForUserNumber.getString("userNumber");
+            studentName = bundleForUserNumber.getString("userName");
+            bundleFromPrep = bundleForUserNumber.getBundle("bundleOfPrep");
         }
 
         txtAps = findViewById(R.id.txtApsent);
@@ -38,6 +46,7 @@ public class AttendanceOfPrep extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(AttendanceOfPrep.this, PrepSchoolProcess.class);
                 i.putExtra("userNumber",studentNumber);
+                i.putExtra("userName",studentName);
                 startActivity(i);
             }
         });

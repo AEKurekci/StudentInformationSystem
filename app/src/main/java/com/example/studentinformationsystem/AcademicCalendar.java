@@ -24,6 +24,7 @@ public class AcademicCalendar extends AppCompatActivity {
     int counter = 0;
     int top;
     String studentNumber;
+    String studentName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,7 @@ public class AcademicCalendar extends AppCompatActivity {
         Bundle bundleForUserNumber = getIntent().getExtras();
         if (bundleForUserNumber != null) {
             studentNumber = bundleForUserNumber.getString("userNumber");
+            studentName = bundleForUserNumber.getString("userName");
         }
 
         Intent i = getIntent();
@@ -52,16 +54,7 @@ public class AcademicCalendar extends AppCompatActivity {
             dates.add(new DatesOfAcademic(events.get(counter),
                     eventStart.get(counter),eventStart.get(counter)));
             counter++;
-        }/*
-        dates.add(new DatesOfAcademic("Yeni Öğrenci Ön Kayıt","16.08.2019 08:30","22.10.2019 23:59"));
-        dates.add(new DatesOfAcademic("Ders Kayıt","09.09.2019 08:30","13.10.2019 23:59"));
-        dates.add(new DatesOfAcademic("Mazeretli Ders Kayıt","16.09.2019 08:30","30.10.2019 23:59"));
-        dates.add(new DatesOfAcademic("Ara Sınav Not Giriş","09.09.2019 08:30","21.12.2019 23:59"));
-        dates.add(new DatesOfAcademic("Yarıyıl Sınav Not Giriş","28.12.2019 08:30","10.01.2019 23:59"));
-        dates.add(new DatesOfAcademic("Bütünleme Not Giriş","15.01.2019 08:30","21.01.2019 23:59"));
-        dates.add(new DatesOfAcademic("Harf Notlarının Yayınlanması","28.12.2019 08:30","22.10.2019 23:59"));
-        dates.add(new DatesOfAcademic("Öğretim Elemanı Yoklama Giriş","16.09.2019 08:30","27.12.2019 23:59"));
-*/
+        }
         final ListView listView = findViewById(R.id.listOfAcademicCal);
         AcademicAdapter adapter = new AcademicAdapter(this, dates);
         listView.setAdapter(adapter);
@@ -73,6 +66,7 @@ public class AcademicCalendar extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(AcademicCalendar.this, MainPage.class);
                 i.putExtra("userNumber", studentNumber);
+                i.putExtra("userName",studentName);
                 startActivity(i);
             }
         });

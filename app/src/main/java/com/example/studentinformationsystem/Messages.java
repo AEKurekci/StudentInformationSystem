@@ -15,6 +15,7 @@ public class Messages extends AppCompatActivity {
 
     TextView txtMessageView;
     private String studentNumber;
+    String studentName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,7 @@ public class Messages extends AppCompatActivity {
         Bundle bundleForUserNumber = getIntent().getExtras();
         if (bundleForUserNumber != null) {
             studentNumber = bundleForUserNumber.getString("userNumber");
+            studentName = bundleForUserNumber.getString("userName");
         }
 
         txtMessageView = findViewById(R.id.txtMessageView);
@@ -42,6 +44,7 @@ public class Messages extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(Messages.this, MainPage.class);
                 i.putExtra("userNumber", studentNumber);
+                i.putExtra("userName",studentName);
                 startActivity(i);
             }
         });

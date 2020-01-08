@@ -18,6 +18,7 @@ public class PrepSchoolProcess extends AppCompatActivity {
     Button btnLessonProgram;
     String studentNumber;
     Bundle bundleFromMain = new Bundle();
+    String studentName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class PrepSchoolProcess extends AppCompatActivity {
         Bundle bundleForUserNumber = getIntent().getExtras();
         if (bundleForUserNumber != null) {
             studentNumber = bundleForUserNumber.getString("userNumber");
+            studentName = bundleForUserNumber.getString("userName");
             bundleFromMain = bundleForUserNumber.getBundle("bundleOfPrep");
         }
 
@@ -38,6 +40,7 @@ public class PrepSchoolProcess extends AppCompatActivity {
                 String str = "fromPrepForCal";
                 i.putExtra("type",str);
                 i.putExtra("userNumber", studentNumber);
+                i.putExtra("userName",studentName);
                 i.putExtra("bundleOfPrep", bundleFromMain);
                 startActivity(i);
             }
@@ -51,6 +54,7 @@ public class PrepSchoolProcess extends AppCompatActivity {
                 String str = "fromPrepForGrade";
                 i.putExtra("type",str);
                 i.putExtra("userNumber", studentNumber);
+                i.putExtra("userName",studentName);
                 i.putExtra("bundleOfPrep", bundleFromMain);
                 startActivity(i);
             }
@@ -65,6 +69,7 @@ public class PrepSchoolProcess extends AppCompatActivity {
                 attendance[1] = "699";
                 i.putExtra("attendance",attendance);
                 i.putExtra("userNumber", studentNumber);
+                i.putExtra("userName",studentName);
                 i.putExtra("bundleOfPrep", bundleFromMain);
                 startActivity(i);
             }
@@ -86,6 +91,7 @@ public class PrepSchoolProcess extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(PrepSchoolProcess.this, MainPage.class);
                 i.putExtra("userNumber", studentNumber);
+                i.putExtra("userName",studentName);
                 startActivity(i);
             }
         });

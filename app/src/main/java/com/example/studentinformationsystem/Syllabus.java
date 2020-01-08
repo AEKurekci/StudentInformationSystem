@@ -39,6 +39,7 @@ public class Syllabus extends AppCompatActivity {
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
     };
+    String studentName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,7 @@ public class Syllabus extends AppCompatActivity {
         Bundle bundleForUserNumber = getIntent().getExtras();
         if (bundleForUserNumber != null) {
             studentNumber = bundleForUserNumber.getString("userNumber");
+            studentName = bundleForUserNumber.getString("userName");
         }
 
         PDFView pdfView = findViewById(R.id.pdfViewOfSyllabus);
@@ -90,6 +92,7 @@ public class Syllabus extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(Syllabus.this, MainPage.class);
                 i.putExtra("userNumber", studentNumber);
+                i.putExtra("userName",studentName);
                 startActivity(i);
             }
         });

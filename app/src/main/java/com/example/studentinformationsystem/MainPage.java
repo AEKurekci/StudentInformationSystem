@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -51,6 +52,8 @@ public class MainPage extends AppCompatActivity implements Parcelable {
     Map<String, Object> AttendMapOfPrep = new HashMap<>();
     Map<String, Object> gradeMapOfPrep = new HashMap<>();
 
+    TextView txtNumberAndName;
+
     Bundle bundleForSummaryGrade;
     Bundle bundleForDetailedGrade;
     Bundle bundleForAttendance;
@@ -62,6 +65,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
     String linkOfTranscript;
     String linkOfSyllabus;
     String studentNumber;
+    String studentName;
 
     FirebaseFirestore db;
     DocumentReference docUserReference;
@@ -95,6 +99,8 @@ public class MainPage extends AppCompatActivity implements Parcelable {
         btnMuf = findViewById(R.id.btnSyllabus2);
         btnHazirlik = findViewById(R.id.btnHazirlik2);
 
+        txtNumberAndName = findViewById(R.id.txtNumAndName);
+
         btnNot.setEnabled(false);
         btnDevam.setEnabled(false);
         btnTranscript.setEnabled(false);
@@ -106,6 +112,8 @@ public class MainPage extends AppCompatActivity implements Parcelable {
         Bundle bundleForUserNumber = getIntent().getExtras();
         if (bundleForUserNumber != null) {
             studentNumber = bundleForUserNumber.getString("userNumber");
+            studentName = bundleForUserNumber.getString("userName");
+            txtNumberAndName.setText(studentNumber + " - " + studentName);
         }
         db = FirebaseFirestore.getInstance();
         colUserReference = db.collection(studentNumber);
@@ -304,6 +312,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
             public void onClick(View view) {
                 Intent i = new Intent(MainPage.this, Messages.class);
                 i.putExtra("userNumber",studentNumber);
+                i.putExtra("userName",studentName);
                 startActivity(i);
             }
         });
@@ -314,6 +323,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
             public void onClick(View v) {
                 Intent i = new Intent(MainPage.this, StudentEntry.class);
                 i.putExtra("userNumber",studentNumber);
+                i.putExtra("userName",studentName);
                 startActivity(i);
             }
         });
@@ -325,6 +335,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                 i.putExtra("summaryGrade", bundleForSummaryGrade);
                 i.putExtra("detailedGrade", bundleForDetailedGrade);
                 i.putExtra("userNumber",studentNumber);
+                i.putExtra("userName",studentName);
                 startActivity(i);
             }
         });
@@ -335,6 +346,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                 Intent i = new Intent(MainPage.this, Attendance.class);
                 i.putExtra("attendance", bundleForAttendance);
                 i.putExtra("userNumber",studentNumber);
+                i.putExtra("userName",studentName);
                 startActivity(i);
             }
         });
@@ -345,6 +357,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                 Intent i = new Intent(MainPage.this,Transcript.class);
                 i.putExtra("transcriptLink",linkOfTranscript);
                 i.putExtra("userNumber",studentNumber);
+                i.putExtra("userName",studentName);
                 startActivity(i);
             }
         });
@@ -355,6 +368,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                 Intent i = new Intent(MainPage.this,AcademicCalendar.class);
                 i.putExtra("academic", bundleForAcademicCal);
                 i.putExtra("userNumber",studentNumber);
+                i.putExtra("userName",studentName);
                 startActivity(i);
             }
         });
@@ -367,6 +381,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                 i.putExtra("type",str);
                 i.putExtra("examCal", bundleForExamCal);
                 i.putExtra("userNumber",studentNumber);
+                i.putExtra("userName",studentName);
                 startActivity(i);
             }
         });
@@ -377,6 +392,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                 Intent i = new Intent(MainPage.this,Syllabus.class);
                 i.putExtra("syllabusLink", linkOfSyllabus);
                 i.putExtra("userNumber",studentNumber);
+                i.putExtra("userName",studentName);
                 startActivity(i);
             }
         });
@@ -387,6 +403,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                 Intent i = new Intent(MainPage.this,PrepSchoolProcess.class);
                 i.putExtra("userNumber",studentNumber);
                 i.putExtra("bundleOfPrep",bundleForPrep);
+                i.putExtra("userName",studentName);
                 startActivity(i);
             }
         });

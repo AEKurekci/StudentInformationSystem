@@ -20,6 +20,7 @@ public class Attendance extends AppCompatActivity {
     Map<String, Object> datasFromDatabase = new HashMap<>();
     Map<String, Object> data = new HashMap<>();
     String studentNumber;
+    String studentName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +60,7 @@ public class Attendance extends AppCompatActivity {
         Bundle bundleForUserNumber = getIntent().getExtras();
         if (bundleForUserNumber != null) {
             studentNumber = bundleForUserNumber.getString("userNumber");
+            studentName = bundleForUserNumber.getString("userName");
         }
 
         fabBack.setOnClickListener(new View.OnClickListener() {
@@ -66,6 +68,7 @@ public class Attendance extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(Attendance.this, MainPage.class);
                 i.putExtra("userNumber", studentNumber);
+                i.putExtra("userName",studentName);
                 startActivity(i);
             }
         });

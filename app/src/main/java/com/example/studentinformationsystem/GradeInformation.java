@@ -19,6 +19,7 @@ import com.example.studentinformationsystem.ui.main.SectionsPagerAdapter;
 public class GradeInformation extends AppCompatActivity {
 
     String studentNumber;
+    String studentName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class GradeInformation extends AppCompatActivity {
 
         if (bundleForUserNumber != null) {
             studentNumber = bundleForUserNumber.getString("userNumber");
+            studentName = bundleForUserNumber.getString("userName");
         }
         Intent i = getIntent();
         Bundle bundleSum = i.getBundleExtra("summaryGrade");
@@ -44,6 +46,7 @@ public class GradeInformation extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(GradeInformation.this, MainPage.class);
                 i.putExtra("userNumber", studentNumber);
+                i.putExtra("userName",studentName);
                 startActivity(i);
             }
         });
