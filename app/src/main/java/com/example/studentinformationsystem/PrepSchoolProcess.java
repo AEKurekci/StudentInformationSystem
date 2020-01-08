@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -64,6 +65,7 @@ public class PrepSchoolProcess extends AppCompatActivity {
                 attendance[1] = "699";
                 i.putExtra("attendance",attendance);
                 i.putExtra("userNumber", studentNumber);
+                i.putExtra("bundleOfPrep", bundleFromMain);
                 startActivity(i);
             }
         });
@@ -71,9 +73,10 @@ public class PrepSchoolProcess extends AppCompatActivity {
         btnLessonProgram.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(PrepSchoolProcess.this, LessonProgram.class);
+                /*Intent i = new Intent(PrepSchoolProcess.this, LessonProgram.class);
                 i.putExtra("userNumber", studentNumber);
-                startActivity(i);
+                startActivity(i);*/
+                Toast.makeText(PrepSchoolProcess.this,"Ders Programı Mevcut Değil",Toast.LENGTH_SHORT).show();
             }
         });
 

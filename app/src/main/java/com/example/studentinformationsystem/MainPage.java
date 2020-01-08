@@ -95,13 +95,13 @@ public class MainPage extends AppCompatActivity implements Parcelable {
         btnMuf = findViewById(R.id.btnSyllabus2);
         btnHazirlik = findViewById(R.id.btnHazirlik2);
 
-        btnNot.setClickable(false);
-        btnDevam.setClickable(false);
-        btnTranscript.setClickable(false);
-        btnAcademic.setClickable(false);
-        btnSinav.setClickable(false);
-        btnMuf.setClickable(false);
-        btnHazirlik.setClickable(false);
+        btnNot.setEnabled(false);
+        btnDevam.setEnabled(false);
+        btnTranscript.setEnabled(false);
+        btnAcademic.setEnabled(false);
+        btnSinav.setEnabled(false);
+        btnMuf.setEnabled(false);
+        btnHazirlik.setEnabled(false);
 
         Bundle bundleForUserNumber = getIntent().getExtras();
         if (bundleForUserNumber != null) {
@@ -135,7 +135,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                     if (document.exists()) {
                         detailedGradeData = document.getData();
                         bundleForDetailedGrade.putSerializable("detailedGrade", (Serializable) detailedGradeData);
-                        btnNot.setClickable(true);
+                        btnNot.setEnabled(true);
                     }else{
                         Log.w(TAG, "No such document");
                     }
@@ -154,7 +154,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                     if (documentSnapshot.exists()){
                         attendanceMap = documentSnapshot.getData();
                         bundleForAttendance.putSerializable("attendanceSeri", (Serializable) attendanceMap);
-                        btnDevam.setClickable(true);
+                        btnDevam.setEnabled(true);
                     }else {
                         Log.w(TAG, "No such document");
                     }
@@ -172,7 +172,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                     DocumentSnapshot documentSnapshot = task.getResult();
                     if (documentSnapshot.exists()){
                         linkOfTranscript = documentSnapshot.getString("link");
-                        btnTranscript.setClickable(true);
+                        btnTranscript.setEnabled(true);
                     }else {
                         Log.w(TAG, "No such document");
                     }
@@ -190,7 +190,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                     DocumentSnapshot documentSnapshot = task.getResult();
                     if (documentSnapshot.exists()){
                         linkOfSyllabus = documentSnapshot.getString("link");
-                        btnMuf.setClickable(true);
+                        btnMuf.setEnabled(true);
                     }else {
                         Log.w(TAG, "No such document");
                     }
@@ -210,7 +210,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                     if (documentSnapshot.exists()){
                         eventMap = documentSnapshot.getData();
                         bundleForAcademicCal.putSerializable("academicCalendar", (Serializable) eventMap);
-                        btnAcademic.setClickable(true);
+                        btnAcademic.setEnabled(true);
                     }else {
                         Log.w(TAG, "No such document");
                     }
@@ -230,7 +230,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                     if (documentSnapshot.exists()){
                         examMap = documentSnapshot.getData();
                         bundleForExamCal.putSerializable("examCalendar", (Serializable) examMap);
-                        btnSinav.setClickable(true);
+                        btnSinav.setEnabled(true);
                     }else {
                         Log.w(TAG, "No such document");
                     }
@@ -250,7 +250,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                     if (documentSnapshot.exists()){
                         examMapOfPrep = documentSnapshot.getData();
                         bundleForPrep.putSerializable("examCalendarOfPrep", (Serializable) examMapOfPrep);
-                        btnSinav.setClickable(true);
+                        btnHazirlik.setEnabled(true);
                     }else {
                         Log.w(TAG, "No such document");
                     }
@@ -269,7 +269,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                     if (documentSnapshot.exists()){
                         AttendMapOfPrep = documentSnapshot.getData();
                         bundleForPrep.putSerializable("attendanceOfPrep", (Serializable) AttendMapOfPrep);
-                        btnSinav.setClickable(true);
+                        btnHazirlik.setEnabled(true);
                     }else {
                         Log.w(TAG, "No such document");
                     }
@@ -288,7 +288,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                     if (documentSnapshot.exists()){
                         gradeMapOfPrep = documentSnapshot.getData();
                         bundleForPrep.putSerializable("gradeInfoOfPrep", (Serializable) gradeMapOfPrep);
-                        btnSinav.setClickable(true);
+                        btnHazirlik.setEnabled(true);
                     }else {
                         Log.w(TAG, "No such document");
                     }
