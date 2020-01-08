@@ -21,6 +21,7 @@ public class ExamCalendar extends AppCompatActivity {
     List<ExamDatesOfPrep> examDatesOfPreps = new ArrayList<>();
     List<ExamDatesOfPrep> examGradeOfPreps = new ArrayList<>();
     Map<String, Object> datasFromDatabase = new HashMap<>();
+    Map<String, Object> datasFromDatabaseForPrep = new HashMap<>();
     List<String> temp = new ArrayList<>();
     String studentNumber;
 
@@ -31,7 +32,6 @@ public class ExamCalendar extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         String type = extras.getString("type");
-        Bundle b = extras.getBundle("examCal");
 
         Bundle bundleForUserNumber = getIntent().getExtras();
         if (bundleForUserNumber != null) {
@@ -41,6 +41,7 @@ public class ExamCalendar extends AppCompatActivity {
         ListView lv = findViewById(R.id.listOfExamDates);
 
         if(type.equals("fromMain")) {
+            Bundle b = extras.getBundle("examCal");
             datasFromDatabase = (Map<String, Object>) b.getSerializable("examCalendar");
             for (String lessonName : datasFromDatabase.keySet()){
                 if(datasFromDatabase.get(lessonName) != null){
@@ -51,29 +52,28 @@ public class ExamCalendar extends AppCompatActivity {
             ExamCalendarAdapter adapter = new ExamCalendarAdapter(this, examDates);
             lv.setAdapter(adapter);
         }else if(type.equals("fromPrepForCal")) {
-            examDatesOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2019"));
-            examDatesOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","21.05.2019"));
-            examDatesOfPreps.add(new ExamDatesOfPrep("Başarı Sınavı:","09.05.2019"));
-            examDatesOfPreps.add(new ExamDatesOfPrep("Proje Çalışması:","05.05.2019"));
-            examDatesOfPreps.add(new ExamDatesOfPrep("Konuşma Sınavı:","18.04.2019"));
-            examDatesOfPreps.add(new ExamDatesOfPrep("Dilin Kullanımı Sınavı 3:","24.03.2019"));
-            examDatesOfPreps.add(new ExamDatesOfPrep("Başarı Sınavı 2:","21.05.2019"));
-            examDatesOfPreps.add(new ExamDatesOfPrep("Dilin Kullanımı Sınavı 2:","07.03.2019"));
-            examDatesOfPreps.add(new ExamDatesOfPrep("Başarı Sınavı 3:","18.11.2018"));
-            examDatesOfPreps.add(new ExamDatesOfPrep("Dilin Kullanımı Sınavı 1:","25.10.2019"));
+            Bundle b = extras.getBundle("bundleOfPrep");
+            datasFromDatabaseForPrep = (Map<String, Object>) b.getSerializable("examCalendarOfPrep");
+            datasFromDatabaseForPrep = (Map<String, Object>) datasFromDatabaseForPrep.get("Bahar");
+            for(String exams : datasFromDatabaseForPrep.keySet()){
+                if (datasFromDatabaseForPrep.get(exams) != null){
+                    String dates = (String) datasFromDatabaseForPrep.get(exams);
+                    examDatesOfPreps.add(new ExamDatesOfPrep(exams,dates));
+                }
+            }
             ExamCalAdapterOfPrep adapterOfPrep = new ExamCalAdapterOfPrep(this, examDatesOfPreps);
             lv.setAdapter(adapterOfPrep);
         }else if(type.equals("fromPrepForGrade")){
-            examGradeOfPreps.add(new ExamDatesOfPrep("Sınıf İçi Performans:","21.05.2016","65"));
-            examGradeOfPreps.add(new ExamDatesOfPrep("Yazma Portfolyosu:","13.05.2016","55"));
-            examGradeOfPreps.add(new ExamDatesOfPrep("Başarı Sınavı::","21.05.2016","55"));
-            examGradeOfPreps.add(new ExamDatesOfPrep("Proje Çalışması:","13.05.2016","55"));
-            examGradeOfPreps.add(new ExamDatesOfPrep("Konuşma Sınavı:","21.05.2016","55"));
-            examGradeOfPreps.add(new ExamDatesOfPrep("Dilin Kullanımı Sınavı 3:","13.05.2016","55"));
-            examGradeOfPreps.add(new ExamDatesOfPrep("Başarı Sınavı 2:","21.05.2016","55"));
-            examGradeOfPreps.add(new ExamDatesOfPrep("Dilin Kullanımı Sınavı 2","13.05.2016","55"));
-            examGradeOfPreps.add(new ExamDatesOfPrep("Başarı Sınavı 3:","21.05.2016","55"));
-            examGradeOfPreps.add(new ExamDatesOfPrep("Dilin Kullanımı Sınavı 1:","13.05.2016","55"));
+            Bundle b = extras.getBundle("bundleOfPrep");
+            datasFromDatabaseForPrep = (Map<String, Object>) b.getSerializable("gradeInfoOfPrep");
+            datasFromDatabaseForPrep = (Map<String, Object>) datasFromDatabaseForPrep.get("Bahar");
+            for(String exams : datasFromDatabaseForPrep.keySet()){
+                if (datasFromDatabaseForPrep.get(exams) != null){
+                    String dates = datasFromDatabaseForPrep.get(exams).toString();
+                    Log.d("AEK", dates + exams);
+                    examGradeOfPreps.add(new ExamDatesOfPrep(exams,"0",dates));
+                }
+            }
             ExamGradeAdapterOfPrep adapterOfPrep = new ExamGradeAdapterOfPrep(this, examGradeOfPreps);
             lv.setAdapter(adapterOfPrep);
         }

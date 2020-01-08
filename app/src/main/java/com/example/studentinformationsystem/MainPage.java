@@ -47,12 +47,16 @@ public class MainPage extends AppCompatActivity implements Parcelable {
     Map<String, Object> attendanceMap = new HashMap<>();
     Map<String, Object> eventMap = new HashMap<>();
     Map<String, Object> examMap = new HashMap<>();
+    Map<String, Object> examMapOfPrep = new HashMap<>();
+    Map<String, Object> AttendMapOfPrep = new HashMap<>();
+    Map<String, Object> gradeMapOfPrep = new HashMap<>();
 
     Bundle bundleForSummaryGrade;
     Bundle bundleForDetailedGrade;
     Bundle bundleForAttendance;
     Bundle bundleForAcademicCal;
     Bundle bundleForExamCal;
+    Bundle bundleForPrep;
     Bundle bundleForNumber;
 
     String linkOfTranscript;
@@ -80,6 +84,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
             bundleForAcademicCal = new Bundle();
             bundleForExamCal = new Bundle();
             bundleForNumber = new Bundle();
+            bundleForPrep = new Bundle();
         }
 
         btnNot = findViewById(R.id.btnNot2);
@@ -235,6 +240,64 @@ public class MainPage extends AppCompatActivity implements Parcelable {
             }
         });
 
+        docUserReference = colUserReference.document("PrepProcess");
+        docUserReference = docUserReference.collection("ExamCalendarOfPrep").document("2015-2016");
+        docUserReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if(task.isSuccessful()){
+                    DocumentSnapshot documentSnapshot = task.getResult();
+                    if (documentSnapshot.exists()){
+                        examMapOfPrep = documentSnapshot.getData();
+                        bundleForPrep.putSerializable("examCalendarOfPrep", (Serializable) examMapOfPrep);
+                        btnSinav.setClickable(true);
+                    }else {
+                        Log.w(TAG, "No such document");
+                    }
+                }else{
+                    Log.e(TAG,"Error Getting Documents.", task.getException());
+                }
+            }
+        });
+        docUserReference = colUserReference.document("PrepProcess");
+        docUserReference = docUserReference.collection("AttendanceOfPrep").document("2015-2016");
+        docUserReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if(task.isSuccessful()){
+                    DocumentSnapshot documentSnapshot = task.getResult();
+                    if (documentSnapshot.exists()){
+                        AttendMapOfPrep = documentSnapshot.getData();
+                        bundleForPrep.putSerializable("attendanceOfPrep", (Serializable) AttendMapOfPrep);
+                        btnSinav.setClickable(true);
+                    }else {
+                        Log.w(TAG, "No such document");
+                    }
+                }else{
+                    Log.e(TAG,"Error Getting Documents.", task.getException());
+                }
+            }
+        });
+        docUserReference = colUserReference.document("PrepProcess");
+        docUserReference = docUserReference.collection("GradeInfoOfPrep").document("2015-2016");
+        docUserReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if(task.isSuccessful()){
+                    DocumentSnapshot documentSnapshot = task.getResult();
+                    if (documentSnapshot.exists()){
+                        gradeMapOfPrep = documentSnapshot.getData();
+                        bundleForPrep.putSerializable("gradeInfoOfPrep", (Serializable) gradeMapOfPrep);
+                        btnSinav.setClickable(true);
+                    }else {
+                        Log.w(TAG, "No such document");
+                    }
+                }else{
+                    Log.e(TAG,"Error Getting Documents.", task.getException());
+                }
+            }
+        });
+
         btnMessage = findViewById(R.id.btnMessage);
         btnMessage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -323,6 +386,7 @@ public class MainPage extends AppCompatActivity implements Parcelable {
             public void onClick(View v) {
                 Intent i = new Intent(MainPage.this,PrepSchoolProcess.class);
                 i.putExtra("userNumber",studentNumber);
+                i.putExtra("bundleOfPrep",bundleForPrep);
                 startActivity(i);
             }
         });

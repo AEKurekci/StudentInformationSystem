@@ -16,6 +16,7 @@ public class PrepSchoolProcess extends AppCompatActivity {
     Button btnAttendance;
     Button btnLessonProgram;
     String studentNumber;
+    Bundle bundleFromMain = new Bundle();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class PrepSchoolProcess extends AppCompatActivity {
         Bundle bundleForUserNumber = getIntent().getExtras();
         if (bundleForUserNumber != null) {
             studentNumber = bundleForUserNumber.getString("userNumber");
+            bundleFromMain = bundleForUserNumber.getBundle("bundleOfPrep");
         }
 
         btnExam = findViewById(R.id.btnExamCalOfPrep);
@@ -35,6 +37,7 @@ public class PrepSchoolProcess extends AppCompatActivity {
                 String str = "fromPrepForCal";
                 i.putExtra("type",str);
                 i.putExtra("userNumber", studentNumber);
+                i.putExtra("bundleOfPrep", bundleFromMain);
                 startActivity(i);
             }
         });
@@ -47,6 +50,7 @@ public class PrepSchoolProcess extends AppCompatActivity {
                 String str = "fromPrepForGrade";
                 i.putExtra("type",str);
                 i.putExtra("userNumber", studentNumber);
+                i.putExtra("bundleOfPrep", bundleFromMain);
                 startActivity(i);
             }
         });
