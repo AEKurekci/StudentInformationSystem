@@ -111,6 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:clickable="false"
                 android:text="@string/btnNotBilgisi" />
 
             <Button
@@ -118,6 +119,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:clickable="false"
                 android:text="@string/btnDevamsizlikBilgisi" />
 
             <Button
@@ -125,6 +127,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:clickable="false"
                 android:text="@string/btnTranskript" />
 
             <Button
@@ -132,6 +135,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:clickable="false"
                 android:text="@string/btnAkademikTakvim" />
 
             <Button
@@ -139,6 +143,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:clickable="false"
                 android:text="@string/btnSinavTakvimi" />
 
             <Button
@@ -146,6 +151,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:clickable="false"
                 android:text="@string/btnMufredatDurumu" />
 
             <Button
@@ -153,6 +159,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:clickable="false"
                 android:text="@string/btnHazirlikIslemleri" />
         </LinearLayout>
     </ScrollView>
