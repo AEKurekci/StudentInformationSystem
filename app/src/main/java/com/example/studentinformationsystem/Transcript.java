@@ -12,9 +12,6 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
-import android.text.Editable;
-import android.text.Spannable;
-import android.util.Log;
 import android.view.View;
 
 import com.github.barteksc.pdfviewer.PDFView;
@@ -27,9 +24,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
 import java.net.URLConnection;
-
-import io.grpc.LoadBalancer;
-import io.grpc.NameResolver;
 
 public class Transcript extends AppCompatActivity {
 

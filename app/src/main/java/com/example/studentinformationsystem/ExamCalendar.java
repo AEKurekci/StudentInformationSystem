@@ -1,7 +1,5 @@
 package com.example.studentinformationsystem;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -13,12 +11,9 @@ import android.widget.ListView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class ExamCalendar extends AppCompatActivity {
 
@@ -33,7 +28,6 @@ public class ExamCalendar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam_calendar);
 
-        //Intent i = getIntent();
         Bundle extras = getIntent().getExtras();
         String type = extras.getString("type");
         Bundle b = extras.getBundle("examCal");

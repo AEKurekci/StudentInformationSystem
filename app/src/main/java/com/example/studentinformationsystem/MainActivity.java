@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private boolean startFromAuthentication = false;
+    private boolean startFromAuthentication = true;
     Button btnStd;
     Button btnAca;
     @Override

@@ -90,7 +90,6 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                     if (document.exists()) {
                         summaryGradeData = document.getData();
                         bundleForSummaryGrade.putSerializable("summaryGrade", (Serializable) summaryGradeData);
-                        summaryGradeData = (Map<String, Object>) bundleForSummaryGrade.getSerializable("summaryGrade");
                     }else{
                         Log.w(TAG, "No such document");
                     }
@@ -108,7 +107,6 @@ public class MainPage extends AppCompatActivity implements Parcelable {
                     if (document.exists()) {
                         detailedGradeData = document.getData();
                         bundleForDetailedGrade.putSerializable("detailedGrade", (Serializable) detailedGradeData);
-                        detailedGradeData = (Map<String, Object>) bundleForDetailedGrade.getSerializable("detailedGrade");
                     }else{
                         Log.w(TAG, "No such document");
                     }
