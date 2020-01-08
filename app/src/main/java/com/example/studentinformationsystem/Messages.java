@@ -14,11 +14,17 @@ public class Messages extends AppCompatActivity {
     FloatingActionButton btnBack;
 
     TextView txtMessageView;
+    private String studentNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_messages);
+
+        Bundle bundleForUserNumber = getIntent().getExtras();
+        if (bundleForUserNumber != null) {
+            studentNumber = bundleForUserNumber.getString("userNumber");
+        }
 
         txtMessageView = findViewById(R.id.txtMessageView);
 
@@ -35,6 +41,7 @@ public class Messages extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Messages.this, MainPage.class);
+                i.putExtra("userNumber", studentNumber);
                 startActivity(i);
             }
         });

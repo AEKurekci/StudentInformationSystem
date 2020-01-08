@@ -14,10 +14,17 @@ public class PrepSchoolProcess extends AppCompatActivity {
     Button btnExam;
     Button btnGrade;
     Button btnAttendance;
+    String studentNumber;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prep_school_process);
+
+        Bundle bundleForUserNumber = getIntent().getExtras();
+        if (bundleForUserNumber != null) {
+            studentNumber = bundleForUserNumber.getString("userNumber");
+        }
 
         btnExam = findViewById(R.id.btnExamCalOfPrep);
         btnExam.setOnClickListener(new View.OnClickListener() {
@@ -26,6 +33,7 @@ public class PrepSchoolProcess extends AppCompatActivity {
                 Intent i = new Intent(PrepSchoolProcess.this,ExamCalendar.class);
                 String str = "fromPrepForCal";
                 i.putExtra("type",str);
+                i.putExtra("userNumber", studentNumber);
                 startActivity(i);
             }
         });
@@ -37,6 +45,7 @@ public class PrepSchoolProcess extends AppCompatActivity {
                 Intent i = new Intent(PrepSchoolProcess.this,ExamCalendar.class);
                 String str = "fromPrepForGrade";
                 i.putExtra("type",str);
+                i.putExtra("userNumber", studentNumber);
                 startActivity(i);
             }
         });
@@ -49,6 +58,7 @@ public class PrepSchoolProcess extends AppCompatActivity {
                 attendance[0] = "85";
                 attendance[1] = "699";
                 i.putExtra("attendance",attendance);
+                i.putExtra("userNumber", studentNumber);
                 startActivity(i);
             }
         });
@@ -58,6 +68,7 @@ public class PrepSchoolProcess extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(PrepSchoolProcess.this, MainPage.class);
+                i.putExtra("userNumber", studentNumber);
                 startActivity(i);
             }
         });

@@ -22,6 +22,7 @@ public class ExamCalendar extends AppCompatActivity {
     List<ExamDatesOfPrep> examGradeOfPreps = new ArrayList<>();
     Map<String, Object> datasFromDatabase = new HashMap<>();
     List<String> temp = new ArrayList<>();
+    String studentNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,11 @@ public class ExamCalendar extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         String type = extras.getString("type");
         Bundle b = extras.getBundle("examCal");
+
+        Bundle bundleForUserNumber = getIntent().getExtras();
+        if (bundleForUserNumber != null) {
+            studentNumber = bundleForUserNumber.getString("userNumber");
+        }
 
         ListView lv = findViewById(R.id.listOfExamDates);
 
@@ -81,6 +87,7 @@ public class ExamCalendar extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(ExamCalendar.this, MainPage.class);
+                i.putExtra("userNumber", studentNumber);
                 startActivity(i);
             }
         });

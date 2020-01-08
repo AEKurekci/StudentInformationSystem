@@ -23,10 +23,18 @@ public class AcademicCalendar extends AppCompatActivity {
     List<String> events = new ArrayList<>();
     int counter = 0;
     int top;
+    String studentNumber;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_academic_calendar);
+
+        Bundle bundleForUserNumber = getIntent().getExtras();
+        if (bundleForUserNumber != null) {
+            studentNumber = bundleForUserNumber.getString("userNumber");
+        }
+
         Intent i = getIntent();
         Bundle b = i.getBundleExtra("academic");
         datasFromDatabase = (Map<String, Object>) b.getSerializable("academicCalendar");
@@ -64,6 +72,7 @@ public class AcademicCalendar extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(AcademicCalendar.this, MainPage.class);
+                i.putExtra("userNumber", studentNumber);
                 startActivity(i);
             }
         });

@@ -39,12 +39,19 @@ public class Transcript extends AppCompatActivity {
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
     };
+    String studentNumber;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transcript);
         Intent i = getIntent();
         link = i.getStringExtra("transcriptLink");
+
+        Bundle bundleForUserNumber = getIntent().getExtras();
+        if (bundleForUserNumber != null) {
+            studentNumber = bundleForUserNumber.getString("userNumber");
+        }
 
         PDFView pdfView = findViewById(R.id.pdfView);
         pdfView.fromAsset("transkript.pdf")
@@ -84,6 +91,7 @@ public class Transcript extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Transcript.this, MainPage.class);
+                i.putExtra("userNumber", studentNumber);
                 startActivity(i);
             }
         });

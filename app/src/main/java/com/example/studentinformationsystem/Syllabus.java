@@ -31,6 +31,8 @@ public class Syllabus extends AppCompatActivity {
     String link;
     FloatingActionButton fabDownload;
 
+    String studentNumber;
+
     //Permissions
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static String[] PERMISSIONS_STORAGE = {
@@ -44,6 +46,10 @@ public class Syllabus extends AppCompatActivity {
         setContentView(R.layout.activity_syllabus);
         Intent i = getIntent();
         link = i.getStringExtra("syllabusLink");
+        Bundle bundleForUserNumber = getIntent().getExtras();
+        if (bundleForUserNumber != null) {
+            studentNumber = bundleForUserNumber.getString("userNumber");
+        }
 
         PDFView pdfView = findViewById(R.id.pdfViewOfSyllabus);
         pdfView.fromAsset("mufredatDurumu.pdf")
@@ -83,6 +89,7 @@ public class Syllabus extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Syllabus.this, MainPage.class);
+                i.putExtra("userNumber", studentNumber);
                 startActivity(i);
             }
         });

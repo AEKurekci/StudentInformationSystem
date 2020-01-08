@@ -182,26 +182,8 @@ public class StudentEntry extends AppCompatActivity {
                             Log.d(TAG, "signInWithEmail:success");
 
                             FirebaseUser user = mAuth.getCurrentUser();
-
-                            /*DataBaseTask taskDB = new DataBaseTask();
-                            try {
-                                bundleForAllData = taskDB.execute(emails.get(user.getEmail()).toString()).get();
-                                Integer size = bundleForAllData.size();
-                                Log.d("SIZE ", size.toString());
-                                Log.d(TAG, "onComplete: TAMAM");
-                            } catch (ExecutionException e) {
-                                e.printStackTrace();
-                            } catch (InterruptedException e) {
-                                e.printStackTrace();
-                            }
-                            bundleForAllData = getDatas(emails.get(user.getEmail()).toString());
-                            Integer size = bundleForAllData.size();
-                            Log.d("SIZE ", size.toString());
-                            Log.d(TAG, "onComplete: TAMAM");
-                            i.putExtra("userDatas", bundleForAllData);*/
+                            i.putExtra("userNumber", emails.get(user.getEmail()).toString());
                             startActivity(i);
-
-
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());

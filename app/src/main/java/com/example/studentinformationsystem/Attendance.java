@@ -19,6 +19,7 @@ public class Attendance extends AppCompatActivity {
     List<AttendanceInfo> listOfAttendance = new ArrayList<>();
     Map<String, Object> datasFromDatabase = new HashMap<>();
     Map<String, Object> data = new HashMap<>();
+    String studentNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,10 +56,16 @@ public class Attendance extends AppCompatActivity {
 
         FloatingActionButton fabBack = findViewById(R.id.fabBackAttendance);
 
+        Bundle bundleForUserNumber = getIntent().getExtras();
+        if (bundleForUserNumber != null) {
+            studentNumber = bundleForUserNumber.getString("userNumber");
+        }
+
         fabBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Attendance.this, MainPage.class);
+                i.putExtra("userNumber", studentNumber);
                 startActivity(i);
             }
         });
