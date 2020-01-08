@@ -65,16 +65,16 @@
 
         <ImageView
             android:id="@+id/imgProfil"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@mipmap/ic_launcher_round" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            app:srcCompat="@drawable/profile_photo" />
 
         <TextView
             android:id="@+id/txtNumAndName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0.1"
             android:text="@string/textNumAndName" />
     </LinearLayout>
 
