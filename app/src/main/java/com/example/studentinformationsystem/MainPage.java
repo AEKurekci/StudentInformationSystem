@@ -90,6 +90,14 @@ public class MainPage extends AppCompatActivity implements Parcelable {
         btnMuf = findViewById(R.id.btnSyllabus2);
         btnHazirlik = findViewById(R.id.btnHazirlik2);
 
+        btnNot.setClickable(false);
+        btnDevam.setClickable(false);
+        btnTranscript.setClickable(false);
+        btnAcademic.setClickable(false);
+        btnSinav.setClickable(false);
+        btnMuf.setClickable(false);
+        btnHazirlik.setClickable(false);
+
         Bundle bundleForUserNumber = getIntent().getExtras();
         if (bundleForUserNumber != null) {
             studentNumber = bundleForUserNumber.getString("userNumber");

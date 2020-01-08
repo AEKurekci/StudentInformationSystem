@@ -38,20 +38,17 @@ public class SummaryGradeFrag extends Fragment {
 
         bundle = getArguments();
         datasFromDatabase = (Map<String, Object>) bundle.getSerializable("summaryGrade");
-        Log.d("AEK",datasFromDatabase.get("Algorithm").toString());
         if (datasFromDatabase.get("Algorithm") != null) {
             data = (Map<String, Object>) datasFromDatabase.get("Algorithm");
             nots.add(new Nots("Algorithm",Integer.parseInt(data.get("vize").toString()),
                     Integer.parseInt(data.get("final").toString()), data.get("harfNotu").toString(),
                     data.get("durumu").toString()));
-            Log.d("NOTIN",nots.get(0).toString());
         }
         if (datasFromDatabase.get("Grafical User Interface") != null) {
             data = (Map<String, Object>) datasFromDatabase.get("Grafical User Interface");
             nots.add(new Nots("Grafical User Interface",Integer.parseInt(data.get("vize").toString()),
                     Integer.parseInt(data.get("final").toString()), data.get("harfNotu").toString(),
                     data.get("durumu").toString()));
-            Log.d("NOTIN",nots.get(0).toString());
         }
         if (datasFromDatabase.get("Artificial Intelligence") != null) {
             data = (Map<String, Object>) datasFromDatabase.get("Artificial Intelligence");
@@ -71,7 +68,7 @@ public class SummaryGradeFrag extends Fragment {
                     Integer.parseInt(data.get("final").toString()), data.get("harfNotu").toString(),
                     data.get("durumu").toString()));
         }
-        final ListView lv = (ListView) view.findViewById(R.id.listGrades);
+        final ListView lv = view.findViewById(R.id.listGrades);
 
         SummaryAdapter adapter = new SummaryAdapter(SummaryGradeFrag.this, nots);
         lv.setAdapter(adapter);

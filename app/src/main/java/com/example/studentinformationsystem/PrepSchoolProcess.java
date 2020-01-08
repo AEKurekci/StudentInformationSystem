@@ -14,6 +14,7 @@ public class PrepSchoolProcess extends AppCompatActivity {
     Button btnExam;
     Button btnGrade;
     Button btnAttendance;
+    Button btnLessonProgram;
     String studentNumber;
 
     @Override
@@ -58,6 +59,15 @@ public class PrepSchoolProcess extends AppCompatActivity {
                 attendance[0] = "85";
                 attendance[1] = "699";
                 i.putExtra("attendance",attendance);
+                i.putExtra("userNumber", studentNumber);
+                startActivity(i);
+            }
+        });
+        btnLessonProgram = findViewById(R.id.btnSchedule);
+        btnLessonProgram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(PrepSchoolProcess.this, LessonProgram.class);
                 i.putExtra("userNumber", studentNumber);
                 startActivity(i);
             }
