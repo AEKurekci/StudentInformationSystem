@@ -144,7 +144,12 @@ public class StudentEntry extends AppCompatActivity {
             public void onClick(View v) {
                 strEmail = txtEmail.getText().toString() + "" + txtPostaUzn.getText().toString();
                 strPassword = txtPassword.getText().toString();
-                if(checkRandoms())
+
+                String code = txtSecureCode.getText().toString();
+                Integer theCode = 0;
+                if (!code.equals(""))
+                    theCode = Integer.parseInt(code);
+                if(checkRandoms(RANDOM_NUMBER_1, RANDOM_NUMBER_2, theCode, false))
                     signIn(strEmail,strPassword);
             }
         });
@@ -170,15 +175,16 @@ public class StudentEntry extends AppCompatActivity {
         sumOfRandoms.setText(randomToShowforUser);
     }
 
-    private boolean checkRandoms() {
-        if (!validateForm())
-            return false;
+    public boolean checkRandoms(Integer rand1, Integer rand2, Integer theCode, boolean isValidate) {
+        if(!isValidate)
+            if (!validateForm())
+                return false;
 
-        Log.d("AEK","checkRandoms");
-        String code = txtSecureCode.getText().toString();
-        Integer sum = RANDOM_NUMBER_1 + RANDOM_NUMBER_2;
-        Integer codeInt = Integer.parseInt(code);
-        if (sum.equals(codeInt))
+        //Log.d("AEK","checkRandoms");
+
+        Integer sum = rand1 + rand2;
+
+        if (sum.equals(theCode))
             return true;
         else
             return false;
@@ -212,7 +218,7 @@ public class StudentEntry extends AppCompatActivity {
                 });
     }
 
-    private boolean validateForm() {
+    public boolean validateForm() {
         boolean valid = true;
 
         String email = txtEmail.getText().toString();
